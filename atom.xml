@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2017-12-28T09:16:22.431Z</updated>
+  <updated>2017-12-28T09:47:48.931Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://runkids.github.io/vscode/2017122701/"/>
     <id>https://runkids.github.io/vscode/2017122701/</id>
     <published>2017-12-27T13:10:30.000Z</published>
-    <updated>2017-12-28T09:16:22.431Z</updated>
+    <updated>2017-12-28T09:47:48.931Z</updated>
     
     <content type="html"><![CDATA[<p>今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！</p><p> <code>Could not create temporary directory ：權限被拒絕</code></p><p>解決辦法：必須更改VSCode目錄的權限，在終端機輸入：</p><ul><li><code>sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode</code></li><li><code>sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode.ShipIt</code></li></ul>]]></content>
     
@@ -39,7 +39,7 @@
       <category term="VSCode" scheme="https://runkids.github.io/categories/vscode/"/>
     
     
-      <category term="VSCode" scheme="https://runkids.github.io/tags/vscode/"/>
+      <category term="VSCode" scheme="https://runkids.github.io/tags/VSCode/"/>
     
   </entry>
   
