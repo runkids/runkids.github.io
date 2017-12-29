@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2017-12-28T09:47:48.931Z</updated>
+  <updated>2017-12-29T14:45:34.939Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[筆記][JS30天-Day01] JavaScript Drum Kit</title>
+    <link href="https://runkids.github.io/js30days/2017122901/"/>
+    <id>https://runkids.github.io/js30days/2017122901/</id>
+    <published>2017-12-29T04:06:03.000Z</published>
+    <updated>2017-12-29T14:45:34.939Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p><h5 id="實做：使用鍵盤按鈕觸發樂器效果的頁面"><a href="#實做：使用鍵盤按鈕觸發樂器效果的頁面" class="headerlink" title="實做：使用鍵盤按鈕觸發樂器效果的頁面"></a>實做：使用鍵盤按鈕觸發樂器效果的頁面</h5><p><a href="https://codepen.io/runkids/pen/qprGvx" title="Demo" target="_blank" rel="noopener">Demo</a></p><hr><h5 id="學習重點："><a href="#學習重點：" class="headerlink" title="學習重點："></a>學習重點：</h5><ul><li>自定義 HTML tag 屬性</li><li>使用鍵盤觸發 audio</li><li>利用 javascript 控制 CSS</li></ul><hr><h5 id="解說："><a href="#解說：" class="headerlink" title="解說："></a>解說：</h5><ul><li><p>為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode<br>利用自定義tag的方式在div和audio綁定 </p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data-key 是自訂的TAG</span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">audio</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>加入監聽事件：keydown ，並使用querySelector 來獲取被按下的元素與keyCode</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown 事件會把鍵盤的訊息傳入，包含keyCode , keyName等等</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">`div[data-key="<span class="subst">$&#123;event.keyCode&#125;</span>"]`</span>);</span><br></pre></td></tr></table></figure></li><li><p>播放音效後綁定新的class給被按下的元素</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> audio = <span class="built_in">document</span>.getElementById(<span class="string">"video"</span>); </span><br><span class="line">audio.currentTime = <span class="number">0</span>;  <span class="comment">//確保可以連續發出音效，加上這個即可</span></span><br></pre></td></tr></table></figure></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">＄(<span class="string">'div'</span>).addClass(<span class="string">'playing'</span>);  <span class="comment">//使用jQery可以這樣綁定Class給元素</span></span><br><span class="line"> <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).classList.add(<span class="string">'palying'</span>); <span class="comment">//原生JS寫法</span></span><br></pre></td></tr></table></figure><ul><li>最後音效結束後，必須讓效果恢復原狀：<br>當我們按下元素後，元素會被放大，完成後就可以利用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/transitionend" title="transitionened" target="_blank" rel="noopener">transitionened</a> 事件恢復原狀！<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">key.addEventListener(<span class="string">"transitionend"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(e.propertyName!==<span class="string">'transform'</span>) <span class="keyword">return</span>;</span><br><span class="line">      key.classList.remove(<span class="string">'playing'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li></ul><h5 id="補充："><a href="#補充：" class="headerlink" title="補充："></a>補充：</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="補充" target="_blank" rel="noopener">transitionened 補充</a><br><a href="https://www.w3schools.com/tags/att_global_data.asp" title="data-* Attributes" target="_blank" rel="noopener">什麼是自定義tag？data-* Attributes</a><br><a href="http://keycode.info/" title="這個網站可以查看鍵盤按鍵對應的keyCode" target="_blank" rel="noopener">這裡可以查看鍵盤按鍵對應的keyCode</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://goo.gl/ChS3iv&quot; alt=&quot;JS_30_Days&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;實做：使用鍵盤按鈕觸發樂器效果的頁面&quot;&gt;&lt;a href=&quot;#實做：使用鍵盤按鈕觸發樂器效果的頁面&quot; class=&quot;headerlink&quot; title
+      
+    
+    </summary>
+    
+      <category term="JS30天學習筆記系列" scheme="https://runkids.github.io/categories/js30days/"/>
+    
+    
+      <category term="javascript" scheme="https://runkids.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VSCode無法更新最新版本</title>
     <link href="https://runkids.github.io/vscode/2017122701/"/>
     <id>https://runkids.github.io/vscode/2017122701/</id>
     <published>2017-12-27T13:10:30.000Z</published>
-    <updated>2017-12-28T09:47:48.931Z</updated>
+    <updated>2017-12-28T13:09:28.105Z</updated>
     
     <content type="html"><![CDATA[<p>今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！</p><p> <code>Could not create temporary directory ：權限被拒絕</code></p><p>解決辦法：必須更改VSCode目錄的權限，在終端機輸入：</p><ul><li><code>sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode</code></li><li><code>sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode.ShipIt</code></li></ul>]]></content>
     

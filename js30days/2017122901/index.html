@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -81,14 +81,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="標籤">
-<meta property="og:url" content="https://runkids.github.io/tags/index.html">
+<meta name="description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點： 自定義 HTML tag 屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說： 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義tag的方式在div和audio綁定  123data-key 是自訂的TAG   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
+<meta property="og:url" content="https://runkids.github.io/js30days/2017122901/index.html">
 <meta property="og:site_name" content="威力學習記錄於此">
+<meta property="og:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點： 自定義 HTML tag 屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說： 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義tag的方式在div和audio綁定  123data-key 是自訂的TAG   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-12-28T12:36:29.711Z">
+<meta property="og:image" content="https://goo.gl/ChS3iv">
+<meta property="og:updated_time" content="2017-12-29T14:45:34.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="標籤">
+<meta name="twitter:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
+<meta name="twitter:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點： 自定義 HTML tag 屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說： 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義tag的方式在div和audio綁定  123data-key 是自訂的TAG   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt">
+<meta name="twitter:image" content="https://goo.gl/ChS3iv">
 
 
 
@@ -118,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/tags/"/>
+  <link rel="canonical" href="https://runkids.github.io/js30days/2017122901/"/>
 
 
 
 
 
-  <title>標籤 | 威力學習記錄於此</title>
+  <title>[筆記][JS30天-Day01] JavaScript Drum Kit | 威力學習記錄於此</title>
   
 
 
@@ -273,40 +279,207 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2017122901/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Willy Hong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://goo.gl/bydiLS">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="威力學習記錄於此">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">標籤</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共計 2 個標籤
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/VSCode/" style="font-size: 12px; color: #ccc">VSCode</a> <a href="/tags/javascript/" style="font-size: 12px; color: #ccc">javascript</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day01] JavaScript Drum Kit</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-12-29T12:06:03+08:00">
+                2017-12-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js30days/" itemprop="url" rel="index">
+                    <span itemprop="name">JS30天學習筆記系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/js30days/2017122901/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="js30days/2017122901/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
+<h5 id="實做：使用鍵盤按鈕觸發樂器效果的頁面"><a href="#實做：使用鍵盤按鈕觸發樂器效果的頁面" class="headerlink" title="實做：使用鍵盤按鈕觸發樂器效果的頁面"></a>實做：使用鍵盤按鈕觸發樂器效果的頁面</h5><p><a href="https://codepen.io/runkids/pen/qprGvx" title="Demo" target="_blank" rel="noopener">Demo</a></p>
+<hr>
+<h5 id="學習重點："><a href="#學習重點：" class="headerlink" title="學習重點："></a>學習重點：</h5><ul>
+<li>自定義 HTML tag 屬性</li>
+<li>使用鍵盤觸發 audio</li>
+<li>利用 javascript 控制 CSS</li>
+</ul>
+<hr>
+<h5 id="解說："><a href="#解說：" class="headerlink" title="解說："></a>解說：</h5><ul>
+<li><p>為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode<br>利用自定義tag的方式在div和audio綁定 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data-key 是自訂的TAG</span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">audio</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加入監聽事件：keydown ，並使用querySelector 來獲取被按下的元素與keyCode</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown 事件會把鍵盤的訊息傳入，包含keyCode , keyName等等</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">`div[data-key="<span class="subst">$&#123;event.keyCode&#125;</span>"]`</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>播放音效後綁定新的class給被按下的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> audio = <span class="built_in">document</span>.getElementById(<span class="string">"video"</span>); </span><br><span class="line">audio.currentTime = <span class="number">0</span>;  <span class="comment">//確保可以連續發出音效，加上這個即可</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">＄(<span class="string">'div'</span>).addClass(<span class="string">'playing'</span>);  <span class="comment">//使用jQery可以這樣綁定Class給元素</span></span><br><span class="line"> <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).classList.add(<span class="string">'palying'</span>); <span class="comment">//原生JS寫法</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>最後音效結束後，必須讓效果恢復原狀：<br>當我們按下元素後，元素會被放大，完成後就可以利用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/transitionend" title="transitionened" target="_blank" rel="noopener">transitionened</a> 事件恢復原狀！<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">key.addEventListener(<span class="string">"transitionend"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(e.propertyName!==<span class="string">'transform'</span>) <span class="keyword">return</span>;</span><br><span class="line">      key.classList.remove(<span class="string">'playing'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="補充："><a href="#補充：" class="headerlink" title="補充："></a>補充：</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="補充" target="_blank" rel="noopener">transitionened 補充</a><br><a href="https://www.w3schools.com/tags/att_global_data.asp" title="data-* Attributes" target="_blank" rel="noopener">什麼是自定義tag？data-* Attributes</a><br><a href="http://keycode.info/" title="這個網站可以查看鍵盤按鍵對應的keyCode" target="_blank" rel="noopener">這裡可以查看鍵盤按鍵對應的keyCode</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/vscode/2017122701/" rel="next" title="VSCode無法更新最新版本">
+                <i class="fa fa-chevron-left"></i> VSCode無法更新最新版本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -346,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -434,6 +616,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用鍵盤按鈕觸發樂器效果的頁面"><span class="nav-number">1.</span> <span class="nav-text">實做：使用鍵盤按鈕觸發樂器效果的頁面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點："><span class="nav-number">2.</span> <span class="nav-text">學習重點：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說："><span class="nav-number">3.</span> <span class="nav-text">解說：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充："><span class="nav-number">4.</span> <span class="nav-text">補充：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,9 +802,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/tags/index.html';
-          this.page.identifier = 'tags/index.html';
-          this.page.title = '標籤';
+          this.page.url = 'https://runkids.github.io/js30days/2017122901/';
+          this.page.identifier = 'js30days/2017122901/';
+          this.page.title = '[筆記][JS30天-Day01] JavaScript Drum Kit';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://runkids.disqus.com/embed.js';
