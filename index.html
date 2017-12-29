@@ -79,6 +79,9 @@
 
 
 
+  <meta property="fb:admins" content="weiheng.hong1" />
+  <meta property="fb:app_id" content="1649788258654809" />
+
 
 
 <meta property="og:type" content="website">
@@ -125,6 +128,24 @@
 
   <title>威力學習記錄於此</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1649788258654809',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_tw/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -358,8 +379,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/js30days/2017122901/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="js30days/2017122901/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2017122901/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -522,8 +542,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/vscode/2017122701/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="vscode/2017122701/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/vscode/2017122701/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -873,14 +892,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -893,6 +904,10 @@
   
 
 
+
+
+
+  
 
 
 
