@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2017-12-29T18:00:35.053Z</updated>
+  <updated>2017-12-30T04:50:51.000Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[筆記][JS30天-Day02] CSS + JS Clock</title>
+    <link href="https://runkids.github.io/js30days/2017123001/"/>
+    <id>https://runkids.github.io/js30days/2017123001/</id>
+    <published>2017-12-30T04:31:08.000Z</published>
+    <updated>2017-12-30T04:50:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p><h5 id="實做：使用CSS-JS-做出時鐘"><a href="#實做：使用CSS-JS-做出時鐘" class="headerlink" title="實做：使用CSS + JS 做出時鐘"></a>實做：使用CSS + JS 做出時鐘</h5><p><a href="https://codepen.io/runkids/pen/JMNWrP" title="Demo" target="_blank" rel="noopener">Demo</a></p><hr><h5 id="學習重點："><a href="#學習重點：" class="headerlink" title="學習重點："></a>學習重點：</h5><ul><li>CSS 旋轉效果</li><li>獲取時間換算角度</li><li>利用 javascript 控制 CSS</li></ul><hr><h5 id="解說："><a href="#解說：" class="headerlink" title="解說："></a>解說：</h5><ul><li><p>會用到以下CSS</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform-oragin</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>()</span><br><span class="line"><span class="selector-tag">transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.05s</span></span><br><span class="line"><span class="selector-tag">transition-timing-function</span>: <span class="selector-tag">cubic-bezier</span>(<span class="selector-tag">x</span>, <span class="selector-tag">x</span>, <span class="selector-tag">x</span>, <span class="selector-tag">x</span>)</span><br></pre></td></tr></table></figure><ol><li>transform-oragin : 調整指針初始位置</li><li>transform: rotate() ：指針角度控制</li><li>transition ：指針跳動的過渡效果</li><li>transition-timing-function : 呈現指針會有滴答滴答的效果</li></ol></li><li><p>利用 setInterval 每秒更新指針角度</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>, 1000);</span></span><br></pre></td></tr></table></figure></li><li><p>獲取時間並換算角度</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> sec = now.getSeconds();</span><br><span class="line"><span class="keyword">let</span> secDeg = (sec/<span class="number">60</span>) * <span class="number">360</span>;</span><br></pre></td></tr></table></figure></li><li><p>操作CSS</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> secHand = <span class="built_in">document</span>.querySelector(<span class="string">".sec-hand"</span>);</span><br><span class="line">secHand.style.transform = <span class="string">`rotate(<span class="subst">$&#123;secDeg+<span class="number">90</span>&#125;</span>deg) scale(0.9, 0.5)`</span>;</span><br></pre></td></tr></table></figure></li></ul><h5 id="補充："><a href="#補充：" class="headerlink" title="補充："></a>補充：</h5><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin" title="transform-origin" target="_blank" rel="noopener">transform-origin</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://goo.gl/ChS3iv&quot; alt=&quot;JS_30_Days&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;實做：使用CSS-JS-做出時鐘&quot;&gt;&lt;a href=&quot;#實做：使用CSS-JS-做出時鐘&quot; class=&quot;headerlink&quot; title=&quot;實做
+      
+    
+    </summary>
+    
+      <category term="JS30天學習筆記系列" scheme="https://runkids.github.io/categories/js30days/"/>
+    
+    
+      <category term="javascript" scheme="https://runkids.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>[筆記][JS30天-Day01] JavaScript Drum Kit</title>
