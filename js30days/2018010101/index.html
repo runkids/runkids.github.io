@@ -85,19 +85,19 @@
 
 
 
-<meta name="description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義資料屬性的方式在div和audio綁定  123data-key 是自訂的屬性   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt;/di">
+<meta name="description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
-<meta property="og:url" content="https://runkids.github.io/js30days/2017122901/index.html">
+<meta property="og:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
+<meta property="og:url" content="https://runkids.github.io/js30days/2018010101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義資料屬性的方式在div和audio綁定  123data-key 是自訂的屬性   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt;/di">
+<meta property="og:description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://goo.gl/ChS3iv">
-<meta property="og:updated_time" content="2017-12-31T11:57:55.122Z">
+<meta property="og:updated_time" content="2018-01-01T09:57:46.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
-<meta name="twitter:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面Demo  學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode利用自定義資料屬性的方式在div和audio綁定  123data-key 是自訂的屬性   &amp;lt;div data-key=&apos;65&apos;&amp;gt;A&amp;lt;/di">
+<meta name="twitter:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
+<meta name="twitter:description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
 <meta name="twitter:image" content="https://goo.gl/ChS3iv">
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/js30days/2017122901/"/>
+  <link rel="canonical" href="https://runkids.github.io/js30days/2018010101/"/>
 
 
 
 
 
-  <title>[筆記][JS30天-Day01] JavaScript Drum Kit | 威力的學習記錄於此</title>
+  <title>[筆記][JS30天-Day03] Playing with CSS Variables and JS | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2017122901/">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2018010101/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Willy Hong">
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day01] JavaScript Drum Kit</h1>
+          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day03] Playing with CSS Variables and JS</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-12-29T12:06:03+08:00">
-                2017-12-29
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-01-01T17:27:59+08:00">
+                2018-01-01
               </time>
             
 
@@ -383,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/js30days/2017122901/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2017122901/" itemprop="commentCount">0</span> comments
+                <a href="/js30days/2018010101/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2018010101/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -418,29 +418,31 @@
 
       
         <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
-<h5 id="實做：使用鍵盤按鈕觸發樂器效果的頁面"><a href="#實做：使用鍵盤按鈕觸發樂器效果的頁面" class="headerlink" title="實做：使用鍵盤按鈕觸發樂器效果的頁面"></a>實做：使用鍵盤按鈕觸發樂器效果的頁面</h5><p><a href="https://codepen.io/runkids/pen/qprGvx" title="Demo" target="_blank" rel="noopener">Demo</a></p>
+<h5 id="實做：使用JS控制CSS來改變圖片效果"><a href="#實做：使用JS控制CSS來改變圖片效果" class="headerlink" title="實做：使用JS控制CSS來改變圖片效果"></a>實做：使用JS控制CSS來改變圖片效果</h5><p><a href="https://goo.gl/SL5qvH" title="Demo" target="_blank" rel="noopener">Demo</a></p>
 <hr>
 <h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
-<li>自定義 HTML 資料屬性</li>
-<li>使用鍵盤觸發 audio</li>
-<li>利用 javascript 控制 CSS</li>
+<li>建立 CSS 全域變數 :root （IE 和 Edge 目前不支援）</li>
+<li>利用 JS 動態改變 CSS 變數</li>
 </ul>
 <hr>
 <h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
-<li><p>為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode<br>利用自定義資料屬性的方式在div和audio綁定 </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data-key 是自訂的屬性</span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">audio</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li><p>定義CSS全域變數<br><code>:root{ --變數名稱 : 變數值 }</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>加入監聽事件：keydown ，並使用querySelector 來獲取被按下的元素與keyCode</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown 事件會把鍵盤的訊息傳入，包含keyCode , keyName等等</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">`div[data-key="<span class="subst">$&#123;event.keyCode&#125;</span>"]`</span>);</span><br></pre></td></tr></table></figure>
+<li><p>使用變數<br><code>var( --變數名稱 )</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--base);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>播放音效後綁定新的class給被按下的元素</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> audio = <span class="built_in">document</span>.getElementById(<span class="string">"video"</span>); </span><br><span class="line">audio.currentTime = <span class="number">0</span>;  <span class="comment">//確保可以連續發出音效，加上這個即可</span></span><br><span class="line"></span><br><span class="line">＄(<span class="string">'div'</span>).addClass(<span class="string">'playing'</span>);  <span class="comment">//使用jQery可以這樣綁定Class給元素</span></span><br><span class="line"> <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).classList.add(<span class="string">'palying'</span>); <span class="comment">//原生JS寫法</span></span><br></pre></td></tr></table></figure>
+<li><p>使用data attribute 定義單位 ex. px ，如果值是顏色就不需要</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"spacing"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">max</span>=<span class="string">"200"</span> <span class="attr">value</span>=<span class="string">"10"</span> <span class="attr">data-sizing</span>=<span class="string">"px"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"base"</span> <span class="attr">value</span>=<span class="string">"#ffc600"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>最後音效結束後，必須讓效果恢復原狀：<br>當我們按下元素後，元素會被放大，完成後就可以利用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/transitionend" title="transitionened" target="_blank" rel="noopener">transitionened</a> 事件恢復原狀！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">key.addEventListener(<span class="string">"transitionend"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(e.propertyName!==<span class="string">'transform'</span>) <span class="keyword">return</span>;</span><br><span class="line">      key.classList.remove(<span class="string">'playing'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li><p>使用 JS 取得 data attribute 值，即我們定義的單位</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> suffix = <span class="keyword">this</span>.dataset.sizing || <span class="string">' '</span> ; <span class="comment">//取得自定義屬性data-sizing，若沒有就給空值</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 JS 動態改變 CSS 變數值<br>利用 <code>document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; )</code> 動態改變 CSS，並且加上單位</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">`--<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>,<span class="keyword">this</span>.value+suffix);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="補充" target="_blank" rel="noopener">transitionened 補充</a><br><a href="https://pjchender.blogspot.tw/2017/01/html-5-data-attribute.html" title="data-* Attributes" target="_blank" rel="noopener">什麼是自定義tag？data-* Attributes</a><br><a href="http://keycode.info/" title="這個網站可以查看鍵盤按鍵對應的keyCode" target="_blank" rel="noopener">這裡可以查看鍵盤按鍵對應的keyCode</a></p>
+<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" title=":root" target="_blank" rel="noopener">:root</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" title="CSS濾鏡" target="_blank" rel="noopener">CSS濾鏡</a></p>
 
       
     </div>
@@ -487,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/javascript/2017122801/" rel="next" title="理解Javascrpit[].forEach.call()">
-                <i class="fa fa-chevron-left"></i> 理解Javascrpit[].forEach.call()
+              <a href="/vue/2017123101/" rel="next" title="使用Vue實做圖片預覽">
+                <i class="fa fa-chevron-left"></i> 使用Vue實做圖片預覽
               </a>
             
           </div>
@@ -496,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/js30days/2017123001/" rel="prev" title="[筆記][JS30天-Day02] CSS + JS Clock">
-                [筆記][JS30天-Day02] CSS + JS Clock <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,7 +528,7 @@
   
     <div class="comments" id="comments">
       <div class="fb-comments"
-           data-href="https://runkids.github.io/js30days/2017122901/"
+           data-href="https://runkids.github.io/js30days/2018010101/"
            data-numposts="10"
            data-width="100%"
            data-colorscheme="light">
@@ -665,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用鍵盤按鈕觸發樂器效果的頁面"><span class="nav-number">1.</span> <span class="nav-text">實做：使用鍵盤按鈕觸發樂器效果的頁面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用JS控制CSS來改變圖片效果"><span class="nav-number">1.</span> <span class="nav-text">實做：使用JS控制CSS來改變圖片效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
             
 
           </div>

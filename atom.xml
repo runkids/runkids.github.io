@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2017-12-31T11:57:31.624Z</updated>
+  <updated>2018-01-01T09:57:46.680Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[筆記][JS30天-Day03] Playing with CSS Variables and JS</title>
+    <link href="https://runkids.github.io/js30days/2018010101/"/>
+    <id>https://runkids.github.io/js30days/2018010101/</id>
+    <published>2018-01-01T09:27:59.000Z</published>
+    <updated>2018-01-01T09:57:46.680Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p><h5 id="實做：使用JS控制CSS來改變圖片效果"><a href="#實做：使用JS控制CSS來改變圖片效果" class="headerlink" title="實做：使用JS控制CSS來改變圖片效果"></a>實做：使用JS控制CSS來改變圖片效果</h5><p><a href="https://goo.gl/SL5qvH" title="Demo" target="_blank" rel="noopener">Demo</a></p><hr><h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul><li>建立 CSS 全域變數 :root （IE 和 Edge 目前不支援）</li><li>利用 JS 動態改變 CSS 變數</li></ul><hr><h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul><li><p>定義CSS全域變數<br><code>:root{ --變數名稱 : 變數值 }</code></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>使用變數<br><code>var( --變數名稱 )</code></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--base);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>使用data attribute 定義單位 ex. px ，如果值是顏色就不需要</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"spacing"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">max</span>=<span class="string">"200"</span> <span class="attr">value</span>=<span class="string">"10"</span> <span class="attr">data-sizing</span>=<span class="string">"px"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"base"</span> <span class="attr">value</span>=<span class="string">"#ffc600"</span> /&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>使用 JS 取得 data attribute 值，即我們定義的單位</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> suffix = <span class="keyword">this</span>.dataset.sizing || <span class="string">' '</span> ; <span class="comment">//取得自定義屬性data-sizing，若沒有就給空值</span></span><br></pre></td></tr></table></figure></li><li><p>使用 JS 動態改變 CSS 變數值<br>利用 <code>document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; )</code> 動態改變 CSS，並且加上單位</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">`--<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>,<span class="keyword">this</span>.value+suffix);</span><br></pre></td></tr></table></figure></li></ul><h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" title=":root" target="_blank" rel="noopener">:root</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" title="CSS濾鏡" target="_blank" rel="noopener">CSS濾鏡</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://goo.gl/ChS3iv&quot; alt=&quot;JS_30_Days&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;實做：使用JS控制CSS來改變圖片效果&quot;&gt;&lt;a href=&quot;#實做：使用JS控制CSS來改變圖片效果&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+      <category term="JS30天學習筆記系列" scheme="https://runkids.github.io/categories/js30days/"/>
+    
+    
+      <category term="javascript" scheme="https://runkids.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Vue實做圖片預覽</title>
