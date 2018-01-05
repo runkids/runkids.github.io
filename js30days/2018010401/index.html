@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://goo.gl/ChS3iv">
 <meta property="og:image" content="https://mdn.mozillademos.org/files/8567/console-table-array.png">
-<meta property="og:updated_time" content="2018-01-04T14:56:49.611Z">
+<meta property="og:updated_time" content="2018-01-05T09:57:37.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[筆記][JS30天-Day04] Array Cardio Day1">
 <meta name="twitter:description" content="實做：Array方法操作 學習重點 Array方法操作：sort , map , filter ,reduce Array.from 轉成陣列   解說請把程式碼貼到瀏覽器console查看結果  順道提 console.table( );在Chrome console 下看會變成下圖這樣變成表格格式了！Cool ~  1234567891011121314const inventors = [">
@@ -453,7 +453,8 @@
 <hr>
 <p>最後結合 map 與 filter 在下面網站找出所有含有 de 的字眼<br><a href="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris" title="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris</a></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> aElement = <span class="built_in">Array</span>.from(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>))</span><br><span class="line">	<span class="keyword">let</span> list = aElement.map(<span class="function"><span class="params">item</span> =&gt;</span> item.textContent)</span><br><span class="line">	                   .filter(<span class="function"><span class="params">item</span> =&gt;</span> item.includes(<span class="string">'de'</span>))</span><br><span class="line"><span class="built_in">console</span>.log(list);</span><br></pre></td></tr></table></figure>
-<p>因<code>querySelectorAll()</code>不是陣列所以沒有Array方法，可以使用Array.from轉成陣列格式，<br>或者使用ES6<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="解構語法" target="_blank" rel="noopener">解構語法</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...document.querySelectorAll(<span class="string">'.mw-category a'</span>)]; <span class="comment">//注意要加上[ ]</span></span><br></pre></td></tr></table></figure></p>
+<p>因<code>querySelectorAll()</code>不是陣列所以沒有Array方法，可以使用Array.from轉成陣列格式，<br>或者使用ES6<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="解構語法" target="_blank" rel="noopener">解構語法</a>,<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...document.querySelectorAll(<span class="string">'.mw-category a'</span>)]; <span class="comment">//注意要加上[ ]</span></span><br></pre></td></tr></table></figure></p>
+<p>ES5用法則是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>));</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
