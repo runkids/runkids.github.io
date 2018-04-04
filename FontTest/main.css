@@ -1,0 +1,28 @@
+@font-face {
+	font-family: '測試';
+	src: url('font_face/Chalkduster.ttf') ;
+}
+
+@font-face {
+	font-family: '測試';
+	src: url('font_face/Brush Script.ttf');
+	font-style: italic ;
+}
+
+@font-face {
+	font-family: '測試';
+	src: url('font_face/Bradley Hand Bold.ttf');
+    font-weight: bold ; 
+}
+
+@font-face {
+	font-family: '測試';
+	src: url('font_face/Trebuchet MS Bold Italic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+body { 
+    font-family:測試; 
+    font-size: 30px;
+}
