@@ -382,7 +382,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/javascript/2017122801/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/javascript/2017122801/" itemprop="commentCount">0</span> comments
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="javascript/2017122801/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -515,11 +516,11 @@
           
   
     <div class="comments" id="comments">
-      <div class="fb-comments"
-           data-href="https://runkids.github.io/javascript/2017122801/"
-           data-numposts="10"
-           data-width="100%"
-           data-colorscheme="light">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     </div>
   
@@ -801,6 +802,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://runkids.github.io/javascript/2017122801/';
+          this.page.identifier = 'javascript/2017122801/';
+          this.page.title = '理解Javascrpit[].forEach.call()';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://runkids.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -813,10 +834,6 @@
   
 
 
-
-
-
-  
 
 
 
