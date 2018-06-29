@@ -85,20 +85,18 @@
 
 
 
-<meta name="description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面See the Pen JS30Days01 by Hung Wei Heng (@runkids) on CodePen.   學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode，利用自定義資料屬性的方式在div和aud">
+<meta name="description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
-<meta property="og:url" content="https://runkids.github.io/js30days/2017122901/index.html">
+<meta property="og:title" content="[筆記] 理解 Set &amp; WeakSet">
+<meta property="og:url" content="https://runkids.github.io/javascript/2018020101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面See the Pen JS30Days01 by Hung Wei Heng (@runkids) on CodePen.   學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode，利用自定義資料屬性的方式在div和aud">
+<meta property="og:description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://goo.gl/ChS3iv">
-<meta property="og:updated_time" content="2018-06-29T01:46:18.519Z">
+<meta property="og:updated_time" content="2018-06-29T04:35:18.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[筆記][JS30天-Day01] JavaScript Drum Kit">
-<meta name="twitter:description" content="實做：使用鍵盤按鈕觸發樂器效果的頁面See the Pen JS30Days01 by Hung Wei Heng (@runkids) on CodePen.   學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS   解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode，利用自定義資料屬性的方式在div和aud">
-<meta name="twitter:image" content="https://goo.gl/ChS3iv">
+<meta name="twitter:title" content="[筆記] 理解 Set &amp; WeakSet">
+<meta name="twitter:description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/js30days/2017122901/"/>
+  <link rel="canonical" href="https://runkids.github.io/javascript/2018020101/"/>
 
 
 
 
 
-  <title>[筆記][JS30天-Day01] JavaScript Drum Kit | 威力的學習記錄於此</title>
+  <title>[筆記] 理解 Set & WeakSet | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -313,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2017122901/">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/javascript/2018020101/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Willy Hong">
@@ -330,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day01] JavaScript Drum Kit</h1>
+          <h1 class="post-title" itemprop="name headline">[筆記] 理解 Set & WeakSet</h1>
         
 
         <div class="post-meta">
@@ -342,8 +340,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-12-29T12:06:03+08:00">
-                2017-12-29
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-01T09:42:10+08:00">
+                2018-02-01
               </time>
             
 
@@ -365,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js30days/" itemprop="url" rel="index">
-                    <span itemprop="name">JS30天學習筆記系列</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -383,8 +381,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/js30days/2017122901/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2017122901/" itemprop="commentCount">0</span> comments
+                <a href="/javascript/2018020101/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/javascript/2018020101/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -417,34 +415,112 @@
       
 
       
-        <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
-<h5 id="實做：使用鍵盤按鈕觸發樂器效果的頁面"><a href="#實做：使用鍵盤按鈕觸發樂器效果的頁面" class="headerlink" title="實做：使用鍵盤按鈕觸發樂器效果的頁面"></a>實做：使用鍵盤按鈕觸發樂器效果的頁面</h5><iframe height="265" scrolling="no" title="JS30Days01" src="//codepen.io/runkids/embed/qprGvx/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/qprGvx/" target="_blank" rel="noopener">JS30Days01</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
-
+        <h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><hr>
+<ul>
+<li><p>可以儲存任何類型的唯一值，不論型別或物件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Set</span>([iterable]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>]);</span><br><span class="line"><span class="comment">//去除重複成員的寫法</span></span><br><span class="line"><span class="built_in">Array</span>.from( set )  <span class="comment">// 1,2,3,4</span></span><br><span class="line">[ ...set ]  <span class="comment">// 1,2,3,4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add</p>
+<ul>
+<li><p>替 Set 新增一個值並回傳 Set Object</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> mySet = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">mySet.add(<span class="string">'1'</span>); <span class="comment">// String</span></span><br><span class="line">mySet.add(<span class="number">2</span>); <span class="comment">// Number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;;</span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">// Object</span></span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">//因obj是參考同一個物件，因次會被濾掉</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//和obj是參考不同的物件，所以這個可以被Set新增</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//同上，因為是全新的一個參考，所以這個也會被Set新增</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = <span class="literal">NaN</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="literal">NaN</span>;</span><br><span class="line">mySet.add(a);</span><br><span class="line">mySet.add(b); <span class="comment">// Set 判斷 NaN 是相等的 </span></span><br><span class="line"></span><br><span class="line">mySet.forEach(<span class="function"><span class="params">item</span>=&gt;</span><span class="built_in">console</span>.log(item)); </span><br><span class="line"><span class="comment">// "1" , 2 , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , NaN</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>size</p>
+<ul>
+<li>返回Set值的總數量 <code>mySet.size ; // 6</code></li>
+</ul>
+</li>
+<li><p>delete  </p>
+<ul>
+<li><p>刪除Set的某個值，返回布林值，代表刪除成功</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>]);</span><br><span class="line">set.delete(<span class="number">1</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>has</p>
+<ul>
+<li><p>返回布林值，判斷是否為Set值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mySet = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>,<span class="number">4</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line">mySet.add(o);</span><br><span class="line">mySet.has(<span class="number">1</span>); <span class="comment">// true</span></span><br><span class="line">mySet.has(<span class="number">3</span>); <span class="comment">// false</span></span><br><span class="line">mySet.has(o); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>clear</p>
+<ul>
+<li>刪除Set所有值，不會返回值 <code>mySet.clear() ;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Set-迭代"><a href="#Set-迭代" class="headerlink" title="Set 迭代"></a>Set 迭代</h4><ol>
+<li>keys()</li>
+<li>values()</li>
+<li>entries()</li>
+<li>forEach()</li>
+</ol>
+<ul>
+<li>keys方法和values方法的行為完全一樣</li>
+<li><p>entries 會返回鍵名與鍵值，且完全一樣</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.keys()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line">  <span class="comment">// A</span></span><br><span class="line">  <span class="comment">// B</span></span><br><span class="line">  <span class="comment">// C</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.values()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// A</span></span><br><span class="line"><span class="comment">// B</span></span><br><span class="line"><span class="comment">// C</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set.entries()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ["A", "A"]</span></span><br><span class="line"><span class="comment">// ["B", "B"]</span></span><br><span class="line"><span class="comment">// ["C", "C"]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根據已上結論，直接使用for of 遍歷 Set 即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> set) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>forEach</p>
+<ul>
+<li>因Set沒有索引值，所以參數value與key是一樣的（如下範例</li>
+<li>值得注意的是，若值為 undefined 還是可以被遍歷出來的</li>
+<li><p>參考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach" title="Set.prototype.forEach()" target="_blank" rel="noopener">Set.prototype.forEach()</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span> , <span class="literal">undefined</span>]);</span><br><span class="line">set.forEach(<span class="function">(<span class="params">value, key</span>) =&gt;</span> <span class="built_in">console</span>.log(key + <span class="string">' : '</span> + value))</span><br><span class="line"><span class="comment">// 1 : 1</span></span><br><span class="line"><span class="comment">// 4 : 4</span></span><br><span class="line"><span class="comment">// 9 : 9</span></span><br><span class="line"><span class="comment">// undefined : undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Set 除了過濾重複值，也可以很容易的實現 聯集（Union）、交集（Intersect）和差集（Difference）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 聯集</span></span><br><span class="line"><span class="keyword">let</span> union = <span class="keyword">new</span> <span class="built_in">Set</span>([...a, ...b]);</span><br><span class="line"><span class="comment">// Set &#123;1, 2, 3, 4&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line"><span class="keyword">let</span> intersect = <span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> b.has(x)));</span><br><span class="line"><span class="comment">// set &#123;2, 3&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line"><span class="keyword">let</span> difference = <span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> !b.has(x)));</span><br><span class="line"><span class="comment">// Set &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="改變Set結構"><a href="#改變Set結構" class="headerlink" title="改變Set結構"></a>改變Set結構</h4>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line">set = <span class="keyword">new</span> <span class="built_in">Set</span>([...set].map(<span class="function"><span class="params">val</span> =&gt;</span> val * <span class="number">2</span>));</span><br><span class="line"><span class="comment">// set的值是2, 4, 6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二</span></span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line">set = <span class="keyword">new</span> <span class="built_in">Set</span>(<span class="built_in">Array</span>.from(set, val =&gt; val * <span class="number">2</span>));</span><br><span class="line"><span class="comment">// set的值是2, 4, 6</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
-<li>自定義 HTML 資料屬性</li>
-<li>使用鍵盤觸發 audio</li>
-<li>利用 javascript 控制 CSS</li>
+<h3 id="WeekSet"><a href="#WeekSet" class="headerlink" title="WeekSet"></a>WeekSet</h3><ul>
+<li><code>WeekSet</code> 是對象值的集合，每個對象值只能出現一次</li>
+<li><p>只能儲存對象引用，不能像Set一樣存放值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">WeakSet</span>([iterable]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = [[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]];</span><br><span class="line"><span class="keyword">const</span> ws = <span class="keyword">new</span> <span class="built_in">WeakSet</span>(a);</span><br><span class="line"><span class="comment">// WeakSet &#123;[1, 2], [3, 4]&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = [<span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> ws = <span class="keyword">new</span> <span class="built_in">WeakSet</span>(b);</span><br><span class="line"><span class="comment">// Uncaught TypeError: Invalid value used in weak set(…)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>add</p>
+<ul>
+<li>替 WeekSet 新增一個對象 <code>Weakly link an object into the set</code></li>
+</ul>
+</li>
+<li><p>delete</p>
+<ul>
+<li>清除 WeekSet 的某個對象 <code>Remove a link to an object from the set</code></li>
+</ul>
+</li>
+<li><p>has</p>
+<ul>
+<li>檢查 WeekSet 是否存在某個對象 <code>Check if an object has already been linked to the set</code></li>
+</ul>
+</li>
+<li><p>clear <code>ps.MDN上把clear方法列為瀏覽器不支援項目了</code></p>
+<ul>
+<li>清除 WeekSet 『所有』對象</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="built_in">WeakSet</span>();</span><br><span class="line"><span class="keyword">var</span> <span class="built_in">window</span> = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">ws.add(<span class="built_in">window</span>);</span><br><span class="line">ws.add(obj);</span><br><span class="line"></span><br><span class="line">ws.has(<span class="built_in">window</span>); <span class="comment">// true</span></span><br><span class="line">ws.has(foo);    <span class="comment">// false foo不是ws成員</span></span><br><span class="line"></span><br><span class="line">ws.delete(<span class="built_in">window</span>);</span><br><span class="line">ws.has(<span class="built_in">window</span>);    <span class="comment">// false, window 已經被移除</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WeekSet沒有Size屬性</p>
+</li>
+<li><p>WeekSet沒有辦法遍歷它的值，因為內部資料隨時可能消失，遍歷機制無法保證資料存在。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ws.size <span class="comment">// undefined</span></span><br><span class="line">ws.forEach <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://stackoverflow.com/questions/30556078/ecmascript-6-what-is-weakset-for" title="what is WeakSet for?" target="_blank" rel="noopener">what is WeakSet for?</a></p>
+</li>
 </ul>
 <hr>
-<h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
-<li>為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode，利用自定義資料屬性的方式在div和audio綁定</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data-key 是自訂的屬性</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">data-key</span>=<span class="string">'65'</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>加入監聽事件：keydown ，並使用querySelector 來獲取被按下的元素與keyCode</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown 事件會把鍵盤的訊息傳入，包含keyCode , keyName等等</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">`div[data-key="<span class="subst">$&#123;event.keyCode&#125;</span>"]`</span>);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>播放音效後綁定新的class給被按下的元素</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> audio = <span class="built_in">document</span>.getElementById(<span class="string">"video"</span>); </span><br><span class="line">audio.currentTime = <span class="number">0</span>;  <span class="comment">//確保可以連續發出音效，加上這個即可</span></span><br><span class="line"></span><br><span class="line">＄(<span class="string">'div'</span>).addClass(<span class="string">'playing'</span>);  <span class="comment">//使用jQery可以這樣綁定Class給元素</span></span><br><span class="line"> <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).classList.add(<span class="string">'palying'</span>); <span class="comment">//原生JS寫法</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>最後音效結束後，必須讓效果恢復原狀：</li>
-</ul>
-<p>當我們按下元素後，元素會被放大，完成後就可以利用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/transitionend" title="transitionened" target="_blank" rel="noopener">transitionened</a> 事件恢復原狀！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">key.addEventListener(<span class="string">"transitionend"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(e.propertyName!==<span class="string">'transform'</span>) <span class="keyword">return</span>;</span><br><span class="line">      key.classList.remove(<span class="string">'playing'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="補充" target="_blank" rel="noopener">transitionened 補充</a><br><a href="https://pjchender.blogspot.tw/2017/01/html-5-data-attribute.html" title="data-* Attributes" target="_blank" rel="noopener">什麼是自定義tag？data-* Attributes</a><br><a href="http://keycode.info/" title="這個網站可以查看鍵盤按鍵對應的keyCode" target="_blank" rel="noopener">這裡可以查看鍵盤按鍵對應的keyCode</a></p>
+<h4 id="參考資料來源"><a href="#參考資料來源" class="headerlink" title="參考資料來源"></a>參考資料來源</h4><ol>
+<li><a href="http://es6.ruanyifeng.com/#docs/set-map" title="Set 和 Map 数据结构" target="_blank" rel="noopener">Set 和 Map 数据结构</a></li>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set" title="MDN - Set" target="_blank" rel="noopener">MDN - Set</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet" title="MDN - WeekSet" target="_blank" rel="noopener">MDN - WeekSet</a></li>
+</ol>
 
       
     </div>
@@ -491,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/javascript/2017122801/" rel="next" title="理解Javascrpit[].forEach.call()">
-                <i class="fa fa-chevron-left"></i> 理解Javascrpit[].forEach.call()
+              <a href="/js30days/2018010401/" rel="next" title="[筆記][JS30天-Day04] Array Cardio Day1">
+                <i class="fa fa-chevron-left"></i> [筆記][JS30天-Day04] Array Cardio Day1
               </a>
             
           </div>
@@ -500,10 +576,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/js30days/2017123001/" rel="prev" title="[筆記][JS30天-Day02] CSS + JS Clock">
-                [筆記][JS30天-Day02] CSS + JS Clock <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,7 +606,7 @@
   
     <div class="comments" id="comments">
       <div class="fb-comments"
-           data-href="https://runkids.github.io/js30days/2017122901/"
+           data-href="https://runkids.github.io/javascript/2018020101/"
            data-numposts="10"
            data-width="100%"
            data-colorscheme="light">
@@ -669,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用鍵盤按鈕觸發樂器效果的頁面"><span class="nav-number">1.</span> <span class="nav-text">實做：使用鍵盤按鈕觸發樂器效果的頁面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-迭代"><span class="nav-number">1.1.</span> <span class="nav-text">Set 迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改變Set結構"><span class="nav-number">1.2.</span> <span class="nav-text">改變Set結構</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeekSet"><span class="nav-number">2.</span> <span class="nav-text">WeekSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#參考資料來源"><span class="nav-number">2.1.</span> <span class="nav-text">參考資料來源</span></a></li></ol></li></ol></div>
             
 
           </div>

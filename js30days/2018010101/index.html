@@ -85,19 +85,19 @@
 
 
 
-<meta name="description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
+<meta name="description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
 <meta property="og:url" content="https://runkids.github.io/js30days/2018010101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
+<meta property="og:description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://goo.gl/ChS3iv">
-<meta property="og:updated_time" content="2018-01-01T09:57:46.680Z">
+<meta property="og:updated_time" content="2018-06-29T01:42:38.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
-<meta name="twitter:description" content="實做：使用JS控制CSS來改變圖片效果Demo  學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數:root{ --變數名稱 : 變數值 } 123:root &amp;#123;  --color: #fff;&amp;#125;  使用變數var( --變數名稱 ) 123img &amp;#123;  backgro">
+<meta name="twitter:description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
 <meta name="twitter:image" content="https://goo.gl/ChS3iv">
 
 
@@ -384,8 +384,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/js30days/2018010101/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="js30days/2018010101/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2018010101/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -419,7 +418,8 @@
 
       
         <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
-<h5 id="實做：使用JS控制CSS來改變圖片效果"><a href="#實做：使用JS控制CSS來改變圖片效果" class="headerlink" title="實做：使用JS控制CSS來改變圖片效果"></a>實做：使用JS控制CSS來改變圖片效果</h5><p><a href="https://goo.gl/SL5qvH" title="Demo" target="_blank" rel="noopener">Demo</a></p>
+<h5 id="實做：使用JS控制CSS來改變圖片效果"><a href="#實做：使用JS控制CSS來改變圖片效果" class="headerlink" title="實做：使用JS控制CSS來改變圖片效果"></a>實做：使用JS控制CSS來改變圖片效果</h5><iframe height="800" scrolling="no" title="JS30Days03" src="//codepen.io/runkids/embed/mpwbXx/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/mpwbXx/" target="_blank" rel="noopener">JS30Days03</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
 <hr>
 <h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
 <li>建立 CSS 全域變數 :root （IE 和 Edge 目前不支援）</li>
@@ -427,22 +427,26 @@
 </ul>
 <hr>
 <h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
-<li><p>定義CSS全域變數<br><code>:root{ --變數名稱 : 變數值 }</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用變數<br><code>var( --變數名稱 )</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--base);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用data attribute 定義單位 ex. px ，如果值是顏色就不需要</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"spacing"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">max</span>=<span class="string">"200"</span> <span class="attr">value</span>=<span class="string">"10"</span> <span class="attr">data-sizing</span>=<span class="string">"px"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"base"</span> <span class="attr">value</span>=<span class="string">"#ffc600"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 JS 取得 data attribute 值，即我們定義的單位</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> suffix = <span class="keyword">this</span>.dataset.sizing || <span class="string">' '</span> ; <span class="comment">//取得自定義屬性data-sizing，若沒有就給空值</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 JS 動態改變 CSS 變數值<br>利用 <code>document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; )</code> 動態改變 CSS，並且加上單位</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">`--<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>,<span class="keyword">this</span>.value+suffix);</span><br></pre></td></tr></table></figure>
-</li>
+<li>定義CSS全域變數 <code>:root{ --變數名稱 : 變數值 }</code></li>
 </ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用變數 <code>var( --變數名稱 )</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--base);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用data attribute 定義單位 ex. px ，如果值是顏色就不需要</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"spacing"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">max</span>=<span class="string">"200"</span> <span class="attr">value</span>=<span class="string">"10"</span> <span class="attr">data-sizing</span>=<span class="string">"px"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"base"</span> <span class="attr">value</span>=<span class="string">"#ffc600"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 JS 取得 data attribute 值，即我們定義的單位</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> suffix = <span class="keyword">this</span>.dataset.sizing || <span class="string">' '</span> ; <span class="comment">//取得自定義屬性data-sizing，若沒有就給空值</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 JS 動態改變 CSS 變數值</li>
+</ul>
+<p>利用 <code>document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; )</code> 動態改變 CSS，並且加上單位</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">`--<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>,<span class="keyword">this</span>.value+suffix);</span><br></pre></td></tr></table></figure>
 <h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" title=":root" target="_blank" rel="noopener">:root</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" title="CSS濾鏡" target="_blank" rel="noopener">CSS濾鏡</a></p>
 
       
@@ -532,11 +536,11 @@
           
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://runkids.github.io/js30days/2018010101/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
   
@@ -590,7 +594,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -818,26 +822,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/js30days/2018010101/';
-          this.page.identifier = 'js30days/2018010101/';
-          this.page.title = '[筆記][JS30天-Day03] Playing with CSS Variables and JS';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://runkids.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -853,6 +837,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -865,7 +853,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

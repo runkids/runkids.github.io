@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入：12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin ~">
+<meta name="description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入： 12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin">
 <meta name="keywords" content="VSCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode無法更新最新版本">
 <meta property="og:url" content="https://runkids.github.io/vscode/2017122701/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入：12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin ~">
+<meta property="og:description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入： 12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-12-29T16:28:45.777Z">
+<meta property="og:updated_time" content="2018-06-29T01:46:57.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode無法更新最新版本">
-<meta name="twitter:description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入：12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin ~">
+<meta name="twitter:description" content="今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！  Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入： 12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin">
 
 
 
@@ -382,8 +382,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/vscode/2017122701/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="vscode/2017122701/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/vscode/2017122701/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -418,8 +417,8 @@
       
         <p>今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！</p>
 <p> <code>Could not create temporary directory ：權限被拒絕</code></p>
-<p>解決辦法：必須更改VSCode目錄的權限，在終端機輸入：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode</span><br><span class="line">sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode.ShipIt</span><br></pre></td></tr></table></figure></p>
-
+<p>解決辦法：必須更改VSCode目錄的權限，在終端機輸入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode</span><br><span class="line">sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode.ShipIt</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -503,11 +502,11 @@
           
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://runkids.github.io/vscode/2017122701/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
   
@@ -552,7 +551,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -764,26 +763,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/vscode/2017122701/';
-          this.page.identifier = 'vscode/2017122701/';
-          this.page.title = 'VSCode無法更新最新版本';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://runkids.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -799,6 +778,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -811,7 +794,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

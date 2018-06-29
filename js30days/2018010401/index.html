@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://goo.gl/ChS3iv">
 <meta property="og:image" content="https://mdn.mozillademos.org/files/8567/console-table-array.png">
-<meta property="og:updated_time" content="2018-01-05T09:57:37.997Z">
+<meta property="og:updated_time" content="2018-06-29T01:06:17.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[筆記][JS30天-Day04] Array Cardio Day1">
 <meta name="twitter:description" content="實做：Array方法操作 學習重點 Array方法操作：sort , map , filter ,reduce Array.from 轉成陣列   解說請把程式碼貼到瀏覽器console查看結果  順道提 console.table( );在Chrome console 下看會變成下圖這樣變成表格格式了！Cool ~  1234567891011121314const inventors = [">
@@ -385,8 +385,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/js30days/2018010401/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="js30days/2018010401/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://runkids.github.io/js30days/2018010401/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -432,30 +431,36 @@
 <hr>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> inventors = [</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Albert"</span>, <span class="attr">last</span>: <span class="string">"Einstein"</span>, <span class="attr">year</span>: <span class="number">1879</span>, <span class="attr">passed</span>: <span class="number">1955</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Isaac"</span>, <span class="attr">last</span>: <span class="string">"Newton"</span>, <span class="attr">year</span>: <span class="number">1643</span>, <span class="attr">passed</span>: <span class="number">1727</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Galileo"</span>, <span class="attr">last</span>: <span class="string">"Galilei"</span>, <span class="attr">year</span>: <span class="number">1564</span>, <span class="attr">passed</span>: <span class="number">1642</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Marie"</span>, <span class="attr">last</span>: <span class="string">"Curie"</span>, <span class="attr">year</span>: <span class="number">1867</span>, <span class="attr">passed</span>: <span class="number">1934</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Johannes"</span>, <span class="attr">last</span>: <span class="string">"Kepler"</span>, <span class="attr">year</span>: <span class="number">1571</span>, <span class="attr">passed</span>: <span class="number">1630</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Nicolaus"</span>, <span class="attr">last</span>: <span class="string">"Copernicus"</span>, <span class="attr">year</span>: <span class="number">1473</span>, <span class="attr">passed</span>: <span class="number">1543</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Max"</span>, <span class="attr">last</span>: <span class="string">"Planck"</span>, <span class="attr">year</span>: <span class="number">1858</span>, <span class="attr">passed</span>: <span class="number">1947</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Katherine"</span>, <span class="attr">last</span>: <span class="string">"Blodgett"</span>, <span class="attr">year</span>: <span class="number">1898</span>, <span class="attr">passed</span>: <span class="number">1979</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Ada"</span>, <span class="attr">last</span>: <span class="string">"Lovelace"</span>, <span class="attr">year</span>: <span class="number">1815</span>, <span class="attr">passed</span>: <span class="number">1852</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Sarah E."</span>, <span class="attr">last</span>: <span class="string">"Goode"</span>, <span class="attr">year</span>: <span class="number">1855</span>, <span class="attr">passed</span>: <span class="number">1905</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Lise"</span>, <span class="attr">last</span>: <span class="string">"Meitner"</span>, <span class="attr">year</span>: <span class="number">1878</span>, <span class="attr">passed</span>: <span class="number">1968</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">first</span>: <span class="string">"Hanna"</span>, <span class="attr">last</span>: <span class="string">"Hammarström"</span>, <span class="attr">year</span>: <span class="number">1829</span>, <span class="attr">passed</span>: <span class="number">1909</span> &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="filter " target="_blank" rel="noopener">filter </a><br>callback function 返回 true 即保留該元素</p>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="filter " target="_blank" rel="noopener">filter </a><br>callback function 返回 true 即保留該元素</li>
+</ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fifteen = inventors.filter(</span><br><span class="line">	<span class="comment">//如果出生年份介於1500~1599就保留</span></span><br><span class="line">    inventor =&gt; inventor.year &gt;= <span class="number">1500</span> &amp;&amp; inventor.year &lt; <span class="number">1600</span></span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.table(fifteen);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="map" target="_blank" rel="noopener">map</a><br>callback function 處理後返回新陣列</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fullName = inventors.map(</span><br><span class="line">    inventor =&gt; inventor.first + <span class="string">' '</span> + inventor.last</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.table(fullName);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="sort" target="_blank" rel="noopener">sort</a><br>預設依照Unicode進行排序</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [<span class="number">1</span>, <span class="number">10</span>, <span class="number">21</span>, <span class="number">2</span>]; </span><br><span class="line">scores.sort(); </span><br><span class="line"><span class="comment">// [1, 10, 2, 21] ，10 會在 2 之前要特別注意</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>也可以自訂compare function，若a&gt;b 大於0，b會排在a之前<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ordered = inventors.sort( <span class="function">(<span class="params">a, b</span>) =&gt;</span> (a &gt; b) ? <span class="number">1</span> : <span class="number">-1</span> );</span><br><span class="line"><span class="built_in">console</span>.table(ordered);</span><br></pre></td></tr></table></figure></p>
-<p>排序活的年數lol<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inventors.sort( <span class="function">(<span class="params">a, b</span>) =&gt;</span> a.passed - a.year - (b.passed - b.year) );</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" title="reduce" target="_blank" rel="noopener">reduce</a><br>由左到右將所有元素做累加，並返回最終值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].reduce(<span class="function"><span class="keyword">function</span>(<span class="params">preVal, lastVal, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> preVal + lastVal;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//10</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="map" target="_blank" rel="noopener">map</a><br>callback function 處理後返回新陣列</li>
 </ul>
-<p>後面可以多一個參數當作初始值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].reduce(<span class="function"><span class="keyword">function</span>(<span class="params">preVal, lastVal, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> preVal + lastVal;</span><br><span class="line">&#125;, <span class="number">10</span>);</span><br><span class="line"><span class="comment">//20</span></span><br></pre></td></tr></table></figure></p>
-<p>統計重複的值有幾個<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = [<span class="string">'car'</span>, <span class="string">'car'</span>, <span class="string">'truck'</span>, <span class="string">'truck'</span>, <span class="string">'bike'</span>, <span class="string">'walk'</span>, <span class="string">'car'</span>, <span class="string">'van'</span>, <span class="string">'bike'</span>, <span class="string">'walk'</span>, <span class="string">'car'</span>, <span class="string">'van'</span>, <span class="string">'car'</span>, <span class="string">'truck'</span> ];</span><br><span class="line">  <span class="keyword">const</span> reduce = data.reduce( <span class="function">(<span class="params">obj, item</span>) =&gt;</span> &#123;</span><br><span class="line">	  <span class="keyword">if</span>( !obj[item]  ) &#123; <span class="comment">//若預設物件沒有就新增一個，並給初始為0</span></span><br><span class="line">		  obj[item] = <span class="number">0</span>;</span><br><span class="line">	  &#125;</span><br><span class="line">		  obj[item]++;</span><br><span class="line">		  <span class="keyword">return</span> obj;</span><br><span class="line">  &#125;, &#123;&#125;); <span class="comment">//預設給一個空物件</span></span><br><span class="line">  <span class="built_in">console</span>.log(reduce);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fullName = inventors.map(</span><br><span class="line">    inventor =&gt; inventor.first + <span class="string">' '</span> + inventor.last</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.table(fullName);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="sort" target="_blank" rel="noopener">sort</a><br>預設依照Unicode進行排序</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [<span class="number">1</span>, <span class="number">10</span>, <span class="number">21</span>, <span class="number">2</span>]; </span><br><span class="line">scores.sort(); </span><br><span class="line"><span class="comment">// [1, 10, 2, 21] ，10 會在 2 之前要特別注意</span></span><br></pre></td></tr></table></figure>
+<p>也可以自訂compare function，若a&gt;b 大於0，b會排在a之前</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ordered = inventors.sort( <span class="function">(<span class="params">a, b</span>) =&gt;</span> (a &gt; b) ? <span class="number">1</span> : <span class="number">-1</span> );</span><br><span class="line"><span class="built_in">console</span>.table(ordered);</span><br></pre></td></tr></table></figure>
+<p>排序活的年數lol</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inventors.sort( <span class="function">(<span class="params">a, b</span>) =&gt;</span> a.passed - a.year - (b.passed - b.year) );</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" title="reduce" target="_blank" rel="noopener">reduce</a><br>由左到右將所有元素做累加，並返回最終值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].reduce(<span class="function"><span class="keyword">function</span>(<span class="params">preVal, lastVal, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> preVal + lastVal;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//10</span></span><br></pre></td></tr></table></figure>
+<p>後面可以多一個參數當作初始值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].reduce(<span class="function"><span class="keyword">function</span>(<span class="params">preVal, lastVal, index, array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> preVal + lastVal;</span><br><span class="line">&#125;, <span class="number">10</span>);</span><br><span class="line"><span class="comment">//20</span></span><br></pre></td></tr></table></figure>
+<p>統計重複的值有幾個</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = [<span class="string">'car'</span>, <span class="string">'car'</span>, <span class="string">'truck'</span>, <span class="string">'truck'</span>, <span class="string">'bike'</span>, <span class="string">'walk'</span>, <span class="string">'car'</span>, <span class="string">'van'</span>, <span class="string">'bike'</span>, <span class="string">'walk'</span>, <span class="string">'car'</span>, <span class="string">'van'</span>, <span class="string">'car'</span>, <span class="string">'truck'</span> ];</span><br><span class="line">  <span class="keyword">const</span> reduce = data.reduce( <span class="function">(<span class="params">obj, item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>( !obj[item]  ) &#123; <span class="comment">//若預設物件沒有就新增一個，並給初始為0</span></span><br><span class="line">      obj[item] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">      obj[item]++;</span><br><span class="line">      <span class="keyword">return</span> obj;</span><br><span class="line">  &#125;, &#123;&#125;); <span class="comment">//預設給一個空物件</span></span><br><span class="line">  <span class="built_in">console</span>.log(reduce);</span><br></pre></td></tr></table></figure>
 <hr>
 <p>最後結合 map 與 filter 在下面網站找出所有含有 de 的字眼<br><a href="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris" title="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> aElement = <span class="built_in">Array</span>.from(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>))</span><br><span class="line">	<span class="keyword">let</span> list = aElement.map(<span class="function"><span class="params">item</span> =&gt;</span> item.textContent)</span><br><span class="line">	                   .filter(<span class="function"><span class="params">item</span> =&gt;</span> item.includes(<span class="string">'de'</span>))</span><br><span class="line"><span class="built_in">console</span>.log(list);</span><br></pre></td></tr></table></figure>
-<p>因<code>querySelectorAll()</code>不是陣列所以沒有Array方法，可以使用Array.from轉成陣列格式，<br>或者使用ES6<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="解構語法" target="_blank" rel="noopener">解構語法</a>,<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...document.querySelectorAll(<span class="string">'.mw-category a'</span>)]; <span class="comment">//注意要加上[ ]</span></span><br></pre></td></tr></table></figure></p>
-<p>ES5用法則是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>));</span><br></pre></td></tr></table></figure></p>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> aElement = <span class="built_in">Array</span>.from(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>))</span><br><span class="line">  <span class="keyword">let</span> list = aElement.map(<span class="function"><span class="params">item</span> =&gt;</span> item.textContent)</span><br><span class="line">                      .filter(<span class="function"><span class="params">item</span> =&gt;</span> item.includes(<span class="string">'de'</span>))</span><br><span class="line"><span class="built_in">console</span>.log(list);</span><br></pre></td></tr></table></figure>
+<p>因<code>querySelectorAll()</code>不是陣列所以沒有Array方法，可以使用Array.from轉成陣列格式，<br>或者使用ES6<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="解構語法" target="_blank" rel="noopener">解構語法</a>,</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...document.querySelectorAll(<span class="string">'.mw-category a'</span>)]; <span class="comment">//注意要加上[ ]</span></span><br></pre></td></tr></table></figure>
+<p>ES5用法則是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.mw-category a'</span>));</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -511,6 +516,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/javascript/2018020101/" rel="prev" title="[筆記] 理解 Set & WeakSet">
+                [筆記] 理解 Set & WeakSet <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -539,11 +548,11 @@
           
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://runkids.github.io/js30days/2018010401/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
   
@@ -597,7 +606,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -825,26 +834,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/js30days/2018010401/';
-          this.page.identifier = 'js30days/2018010401/';
-          this.page.title = '[筆記][JS30天-Day04] Array Cardio Day1';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://runkids.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -860,6 +849,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -872,7 +865,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

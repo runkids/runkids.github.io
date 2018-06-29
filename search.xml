@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[[筆記] 理解 Set & WeakSet]]></title>
+    <url>%2Fjavascript%2F2018020101%2F</url>
+    <content type="text"><![CDATA[Set 可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set ) // 1,2,3,4[ ...set ] // 1,2,3,4 add 替 Set 新增一個值並回傳 Set Object 12345678910111213141516171819202122let mySet = new Set();mySet.add('1'); // StringmySet.add(2); // Numberlet obj = &#123;key:'hello'&#125;;mySet.add(obj); // ObjectmySet.add(obj); //因obj是參考同一個物件，因次會被濾掉mySet.add(&#123;key:'hello'&#125;); //和obj是參考不同的物件，所以這個可以被Set新增mySet.add(&#123;key:'hello'&#125;); //同上，因為是全新的一個參考，所以這個也會被Set新增let a = NaN;let b = NaN;mySet.add(a);mySet.add(b); // Set 判斷 NaN 是相等的 mySet.forEach(item=&gt;console.log(item)); // "1" , 2 , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , NaN size 返回Set值的總數量 mySet.size ; // 6 delete 刪除Set的某個值，返回布林值，代表刪除成功 12const set = new Set([1, 2, 3, 4, 4]);set.delete(1); // true has 返回布林值，判斷是否為Set值 1234567let mySet = new Set([1,4]);var o = &#123;a: 1, b: 2&#125;;mySet.add(o);mySet.has(1); // truemySet.has(3); // falsemySet.has(o); // true clear 刪除Set所有值，不會返回值 mySet.clear() ; Set 迭代 keys() values() entries() forEach() keys方法和values方法的行為完全一樣 entries 會返回鍵名與鍵值，且完全一樣 12345678910111213141516171819202122let set = new Set(['A', 'B', 'C']);for (let item of set.keys()) &#123; console.log(item);&#125; // A // B // Cfor (let item of set.values()) &#123; console.log(item);&#125;// A// B// Cfor (let item of set.entries()) &#123; console.log(item);&#125;// ["A", "A"]// ["B", "B"]// ["C", "C"] 根據已上結論，直接使用for of 遍歷 Set 即可 123for (let item of set) &#123; console.log(item);&#125; forEach 因Set沒有索引值，所以參數value與key是一樣的（如下範例 值得注意的是，若值為 undefined 還是可以被遍歷出來的 參考：Set.prototype.forEach() 123456set = new Set([1, 4, 9 , undefined]);set.forEach((value, key) =&gt; console.log(key + ' : ' + value))// 1 : 1// 4 : 4// 9 : 9// undefined : undefined Set 除了過濾重複值，也可以很容易的實現 聯集（Union）、交集（Intersect）和差集（Difference） 1234567891011121314let a = new Set([1, 2, 3]);let b = new Set([4, 3, 2]);// 聯集let union = new Set([...a, ...b]);// Set &#123;1, 2, 3, 4&#125;// 交集let intersect = new Set([...a].filter(x =&gt; b.has(x)));// set &#123;2, 3&#125;// 差集let difference = new Set([...a].filter(x =&gt; !b.has(x)));// Set &#123;1&#125; 改變Set結構 123456789// 方法一let set = new Set([1, 2, 3]);set = new Set([...set].map(val =&gt; val * 2));// set的值是2, 4, 6// 方法二let set = new Set([1, 2, 3]);set = new Set(Array.from(set, val =&gt; val * 2));// set的值是2, 4, 6 WeekSet WeekSet 是對象值的集合，每個對象值只能出現一次 只能儲存對象引用，不能像Set一樣存放值 123456789new WeakSet([iterable]);const a = [[1, 2], [3, 4]];const ws = new WeakSet(a);// WeakSet &#123;[1, 2], [3, 4]&#125;const b = [3, 4];const ws = new WeakSet(b);// Uncaught TypeError: Invalid value used in weak set(…) add 替 WeekSet 新增一個對象 Weakly link an object into the set delete 清除 WeekSet 的某個對象 Remove a link to an object from the set has 檢查 WeekSet 是否存在某個對象 Check if an object has already been linked to the set clear ps.MDN上把clear方法列為瀏覽器不支援項目了 清除 WeekSet 『所有』對象 123456789101112var ws = new WeakSet();var window = &#123;&#125;;var foo = &#123;&#125;;ws.add(window);ws.add(obj);ws.has(window); // truews.has(foo); // false foo不是ws成員ws.delete(window);ws.has(window); // false, window 已經被移除 WeekSet沒有Size屬性 WeekSet沒有辦法遍歷它的值，因為內部資料隨時可能消失，遍歷機制無法保證資料存在。 12ws.size // undefinedws.forEach // undefined what is WeakSet for? 參考資料來源 Set 和 Map 数据结构 MDN - Set MDN - WeekSet]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[筆記][JS30天-Day04] Array Cardio Day1]]></title>
+    <url>%2Fjs30days%2F2018010401%2F</url>
+    <content type="text"><![CDATA[實做：Array方法操作 學習重點 Array方法操作：sort , map , filter ,reduce Array.from 轉成陣列 解說請把程式碼貼到瀏覽器console查看結果 順道提 console.table( );在Chrome console 下看會變成下圖這樣變成表格格式了！Cool ~ 1234567891011121314const inventors = [ &#123; first: "Albert", last: "Einstein", year: 1879, passed: 1955 &#125;, &#123; first: "Isaac", last: "Newton", year: 1643, passed: 1727 &#125;, &#123; first: "Galileo", last: "Galilei", year: 1564, passed: 1642 &#125;, &#123; first: "Marie", last: "Curie", year: 1867, passed: 1934 &#125;, &#123; first: "Johannes", last: "Kepler", year: 1571, passed: 1630 &#125;, &#123; first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 &#125;, &#123; first: "Max", last: "Planck", year: 1858, passed: 1947 &#125;, &#123; first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 &#125;, &#123; first: "Ada", last: "Lovelace", year: 1815, passed: 1852 &#125;, &#123; first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 &#125;, &#123; first: "Lise", last: "Meitner", year: 1878, passed: 1968 &#125;, &#123; first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 &#125;]; filter callback function 返回 true 即保留該元素 12345const fifteen = inventors.filter( //如果出生年份介於1500~1599就保留 inventor =&gt; inventor.year &gt;= 1500 &amp;&amp; inventor.year &lt; 1600);console.table(fifteen); mapcallback function 處理後返回新陣列 1234const fullName = inventors.map( inventor =&gt; inventor.first + ' ' + inventor.last);console.table(fullName); sort預設依照Unicode進行排序 123var scores = [1, 10, 21, 2]; scores.sort(); // [1, 10, 2, 21] ，10 會在 2 之前要特別注意 也可以自訂compare function，若a&gt;b 大於0，b會排在a之前 12const ordered = inventors.sort( (a, b) =&gt; (a &gt; b) ? 1 : -1 );console.table(ordered); 排序活的年數lol 1inventors.sort( (a, b) =&gt; a.passed - a.year - (b.passed - b.year) ); reduce由左到右將所有元素做累加，並返回最終值 1234[0,1,2,3,4].reduce(function(preVal, lastVal, index, array)&#123; return preVal + lastVal;&#125;);//10 後面可以多一個參數當作初始值 1234[0,1,2,3,4].reduce(function(preVal, lastVal, index, array)&#123; return preVal + lastVal;&#125;, 10);//20 統計重複的值有幾個 123456789const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ]; const reduce = data.reduce( (obj, item) =&gt; &#123; if( !obj[item] ) &#123; //若預設物件沒有就新增一個，並給初始為0 obj[item] = 0; &#125; obj[item]++; return obj; &#125;, &#123;&#125;); //預設給一個空物件 console.log(reduce); 最後結合 map 與 filter 在下面網站找出所有含有 de 的字眼https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris 1234const aElement = Array.from(document.querySelectorAll('.mw-category a')) let list = aElement.map(item =&gt; item.textContent) .filter(item =&gt; item.includes('de'))console.log(list); 因querySelectorAll()不是陣列所以沒有Array方法，可以使用Array.from轉成陣列格式，或者使用ES6解構語法, 1[...document.querySelectorAll('.mw-category a')]; //注意要加上[ ] ES5用法則是 1[].slice.call(document.querySelectorAll('.mw-category a'));]]></content>
+      <categories>
+        <category>JS30天學習筆記系列</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[筆記][JS30天-Day03] Playing with CSS Variables and JS]]></title>
+    <url>%2Fjs30days%2F2018010101%2F</url>
+    <content type="text"><![CDATA[實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen. 學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數 解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 } 123:root &#123; --color: #fff;&#125; 使用變數 var( --變數名稱 ) 123img &#123; background: var(--base);&#125; 使用data attribute 定義單位 ex. px ，如果值是顏色就不需要 12&lt;input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px"/&gt;&lt;input type="color" name="base" value="#ffc600" /&gt; 使用 JS 取得 data attribute 值，即我們定義的單位 1const suffix = this.dataset.sizing || ' ' ; //取得自定義屬性data-sizing，若沒有就給空值 使用 JS 動態改變 CSS 變數值 利用 document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; ) 動態改變 CSS，並且加上單位 1document.documentElement.style.setProperty(`--$&#123;this.name&#125;`,this.value+suffix); 補充:rootCSS濾鏡]]></content>
+      <categories>
+        <category>JS30天學習筆記系列</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用Vue實做圖片預覽]]></title>
+    <url>%2Fvue%2F2017123101%2F</url>
+    <content type="text"><![CDATA[單圖檔預覽HTML： 12345&lt;div id='app'&gt; &lt;input type="file" @change="fileSelected"/&gt; &lt;img v-if="image" :src="image" width="300"/&gt; &lt;br/&gt;&lt;/div&gt; 這裡我們要顯示一個上傳檔案的按鈕，並且在img tag顯示選擇的圖片 Javascript: 123456789fileSelected(event)&#123; const file = event.target.files.item(0); //取得File物件 const reader = new FileReader(); //建立FileReader 監聽 Load 事件 reader.addEventListener('load',this.imageLoader); reader.readAsDataURL(file); &#125; imageLoader(event)&#123; this.image=event.target.result; &#125; 在Vue實體中，於methods建立fileSelected方法，當檔案按鈕觸發change事件時，會取得file物件 此時利用FileReader監聽 Load事件，取得圖檔被轉成Base64格式的URL 再把URL 綁到 img 的src 即可 單檔預覽Demo 多圖檔預覽HTML： 12345&lt;div id='app'&gt; &lt;input type="file" @change="fileSelected" multiple/&gt; &lt;br&gt; &lt;img :src="image.src" :height="image.height" v-for="image in images" /&gt;&lt;/div&gt; 這裡我們要顯示一個上傳檔案的按鈕，並加上multiple img Tag 則使用 v-for 的方式呈現 Javascript: 12345678910111213141516171819fileSelected(event) &#123; this.images=[]; const files = event.target.files; //取得File物件 [].forEach.call(files,this.fileReader);&#125;,fileReader(file) &#123; const reader = new FileReader(); //建立FileReader 監聽 Load 事件 reader.addEventListener("load", this.createImage); reader.readAsDataURL(file);&#125;,createImage(event) &#123; const file = event.target; const image = &#123; height : 100, title : file.name, src : file.result &#125;; this.images.push(image);&#125; 多檔作法其實與單檔相似，利用forEach個別取得圖檔的 Base64 RUL createImage 方法會把每一個URL存放到data 中的 images陣列 多檔預覽Demo 參考FileReader.readAsDataURL()理解Javascrpit[].forEach.call()]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[筆記][JS30天-Day02] CSS + JS Clock]]></title>
+    <url>%2Fjs30days%2F2017123001%2F</url>
+    <content type="text"><![CDATA[實做：使用CSS + JS 做出時鐘See the Pen JS30Days02 by Hung Wei Heng (@runkids) on CodePen. 學習重點 CSS 旋轉效果 獲取時間換算角度 利用 javascript 控制 CSS 解說 會用到以下CSS 1234transform-oragintransform: rotate()transition: all 0.05stransition-timing-function: cubic-bezier(x, x, x, x) transform-oragin : 調整指針初始位置 transform: rotate() ：指針角度控制 transition ：指針跳動的過渡效果 transition-timing-function : 呈現指針會有滴答滴答的效果 利用 setInterval 每秒更新指針角度 1setInterval(function, 1000); 獲取時間並換算角度 123let now = new Date();let sec = now.getSeconds();let secDeg = (sec/60) * 360; 操作CSS 12const secHand = document.querySelector(".sec-hand");secHand.style.transform = `rotate($&#123;secDeg+90&#125;deg) scale(0.9, 0.5)`; 補充transform-origin]]></content>
+      <categories>
+        <category>JS30天學習筆記系列</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[筆記][JS30天-Day01] JavaScript Drum Kit]]></title>
+    <url>%2Fjs30days%2F2017122901%2F</url>
+    <content type="text"><![CDATA[實做：使用鍵盤按鈕觸發樂器效果的頁面See the Pen JS30Days01 by Hung Wei Heng (@runkids) on CodePen. 學習重點 自定義 HTML 資料屬性 使用鍵盤觸發 audio 利用 javascript 控制 CSS 解說 為了按下鍵盤後，能夠對應要發出的音效，必須在每個元素上綁定 keyCode，利用自定義資料屬性的方式在div和audio綁定 123data-key 是自訂的屬性&lt;div data-key='65'&gt;A&lt;/div&gt;&lt;audio data-key='65'&gt;&lt;/audio&gt; 加入監聽事件：keydown ，並使用querySelector 來獲取被按下的元素與keyCode 12//keydown 事件會把鍵盤的訊息傳入，包含keyCode , keyName等等document.querySelector(`div[data-key="$&#123;event.keyCode&#125;"]`); 播放音效後綁定新的class給被按下的元素 12345var audio = document.getElementById("video"); audio.currentTime = 0; //確保可以連續發出音效，加上這個即可＄('div').addClass('playing'); //使用jQery可以這樣綁定Class給元素 document.querySelector('div').classList.add('palying'); //原生JS寫法 最後音效結束後，必須讓效果恢復原狀： 當我們按下元素後，元素會被放大，完成後就可以利用 transitionened 事件恢復原狀！ 1234key.addEventListener("transitionend",function(e)=&gt;&#123; if(e.propertyName!=='transform') return; key.classList.remove('playing');&#125;); 補充transitionened 補充什麼是自定義tag？data-* Attributes這裡可以查看鍵盤按鍵對應的keyCode]]></content>
+      <categories>
+        <category>JS30天學習筆記系列</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[理解Javascrpit[].forEach.call()]]></title>
+    <url>%2Fjavascript%2F2017122801%2F</url>
+    <content type="text"><![CDATA[今天在developer.mozilla.org看到一個有趣的寫法，故在此記錄一下 1[].forEach.call(files, readAndPreview); 這段寫法其實是下面的簡潔寫法 1Array.prototype.forEach.call(files, readAndPreview); files 可以是DOM元素， ex. document.querySelectorAll(“.imgFrame”) 利用call把空陣列的this指向files，如此一來files就能跑forEach了 而後面的call back function , 可以取得陣列的值及index，可以做額外處理 1234567[].forEach.call(["a", "b", "c", "d"], function (item, index, arr)&#123; console.log(index + ": " + item);&#125;);// 0: "a"// 1: "b"// 2: "c"// 3: "d" 參考Function.prototype.callWhat does [].forEach.call() do in JavaScript?]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[VSCode無法更新最新版本]]></title>
+    <url>%2Fvscode%2F2017122701%2F</url>
+    <content type="text"><![CDATA[今天要更新VSCode,結果跳出下面的訊息,然後就一直更新失敗！ Could not create temporary directory ：權限被拒絕 解決辦法：必須更改VSCode目錄的權限，在終端機輸入： 12sudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCodesudo chown -R $USER:admin ~/Library/Caches/com.microsoft.VSCode.ShipIt]]></content>
+      <categories>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+      </tags>
+  </entry>
+</search>
