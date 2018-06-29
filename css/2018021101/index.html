@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -85,20 +85,26 @@
 
 
 
-<meta name="description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
-<meta name="keywords" content="javascript">
+<meta name="description" content="建立浮動版面建立浮動的圖像應預先設定好寬度，且盡量使用百分比來設計，這樣可以根據螢幕尺寸自動調整，更容易建立響應式網頁免費模版 floatfloat 屬性有 left | right | none       1. left         The element must float on the left side of its containing block.     2. right">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
-<meta property="og:url" content="https://runkids.github.io/js30days/2018010101/index.html">
+<meta property="og:title" content="[CSS] Float &amp; Position">
+<meta property="og:url" content="https://runkids.github.io/css/2018021101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
+<meta property="og:description" content="建立浮動版面建立浮動的圖像應預先設定好寬度，且盡量使用百分比來設計，這樣可以根據螢幕尺寸自動調整，更容易建立響應式網頁免費模版 floatfloat 屬性有 left | right | none       1. left         The element must float on the left side of its containing block.     2. right">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://goo.gl/ChS3iv">
-<meta property="og:updated_time" content="2018-06-29T01:42:38.768Z">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/4927/=floats.png">
+<meta property="og:image" content="https://internetingishard.com/html-and-css/floats/methods-for-clearing-floats-6429d9.png">
+<meta property="og:image" content="https://i0.wp.com/kgl.idv.tw/wp-content/uploads/2014/11/clearfix.gif?resize=700%2C394">
+<meta property="og:image" content="https://cdn.css-tricks.com/wp-content/uploads/2010/10/desire1.png">
+<meta property="og:image" content="https://internetingishard.com/html-and-css/advanced-positioning/css-positioning-schemes-790d5b.png">
+<meta property="og:image" content="https://i.imgur.com/3TmCIHV.png">
+<meta property="og:image" content="https://i.imgur.com/eflGond.png">
+<meta property="og:updated_time" content="2018-06-29T07:33:46.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[筆記][JS30天-Day03] Playing with CSS Variables and JS">
-<meta name="twitter:description" content="實做：使用JS控制CSS來改變圖片效果See the Pen JS30Days03 by Hung Wei Heng (@runkids) on CodePen.   學習重點 建立 CSS 全域變數 :root （IE 和 Edge 目前不支援） 利用 JS 動態改變 CSS 變數   解說 定義CSS全域變數 :root{ --變數名稱 : 變數值 }  123:root &amp;#123;  -">
-<meta name="twitter:image" content="https://goo.gl/ChS3iv">
+<meta name="twitter:title" content="[CSS] Float &amp; Position">
+<meta name="twitter:description" content="建立浮動版面建立浮動的圖像應預先設定好寬度，且盡量使用百分比來設計，這樣可以根據螢幕尺寸自動調整，更容易建立響應式網頁免費模版 floatfloat 屬性有 left | right | none       1. left         The element must float on the left side of its containing block.     2. right">
+<meta name="twitter:image" content="https://developer.mozilla.org/@api/deki/files/4927/=floats.png">
 
 
 
@@ -128,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/js30days/2018010101/"/>
+  <link rel="canonical" href="https://runkids.github.io/css/2018021101/"/>
 
 
 
 
 
-  <title>[筆記][JS30天-Day03] Playing with CSS Variables and JS | 威力的學習記錄於此</title>
+  <title>[CSS] Float & Position | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -313,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2018010101/">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/css/2018021101/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Willy Hong">
@@ -330,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day03] Playing with CSS Variables and JS</h1>
+          <h1 class="post-title" itemprop="name headline">[CSS] Float & Position</h1>
         
 
         <div class="post-meta">
@@ -342,8 +348,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-01-01T17:27:59+08:00">
-                2018-01-01
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-11T21:42:10+08:00">
+                2018-02-11
               </time>
             
 
@@ -365,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js30days/" itemprop="url" rel="index">
-                    <span itemprop="name">JS30天學習筆記系列</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -383,9 +389,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/js30days/2018010101/#comments" itemprop="discussionUrl">
+                <a href="/css/2018021101/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="js30days/2018010101/" itemprop="commentCount"></span>
+                        data-disqus-identifier="css/2018021101/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,37 +424,100 @@
       
 
       
-        <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
-<h5 id="實做：使用JS控制CSS來改變圖片效果"><a href="#實做：使用JS控制CSS來改變圖片效果" class="headerlink" title="實做：使用JS控制CSS來改變圖片效果"></a>實做：使用JS控制CSS來改變圖片效果</h5><iframe height="800" scrolling="no" title="JS30Days03" src="//codepen.io/runkids/embed/mpwbXx/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/mpwbXx/" target="_blank" rel="noopener">JS30Days03</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+        <h2 id="建立浮動版面"><a href="#建立浮動版面" class="headerlink" title="建立浮動版面"></a>建立浮動版面</h2><p>建立浮動的圖像應預先設定好寬度，且盡量使用百分比來設計，這樣可以根據螢幕尺寸自動調整，更容易建立響應式網頁<br><a href="https://templated.co/" target="_blank" rel="noopener">免費模版</a></p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><pre><code>float 屬性有 left | right | none 
 
-<hr>
-<h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
-<li>建立 CSS 全域變數 :root （IE 和 Edge 目前不支援）</li>
-<li>利用 JS 動態改變 CSS 變數</li>
+    1. left
+        The element must float on the left side of its containing block.
+    2. right
+        The element must float on the right side of its containing block.
+    3. none
+        The element must not float.
+</code></pre><ul>
+<li>以下圖為例，其中有兩個向左浮動，一個向右浮動。要注意到<code>第二個向左浮動的正方形</code>被放在<code>第一個向左浮動的正方形</code>的右邊。如果還有更多的正方形這樣浮動，它們會<code>繼續向右堆放</code>，直到填滿容器一整行，之後換行至下一行<br><img src="https://developer.mozilla.org/@api/deki/files/4927/=floats.png" alt=""></li>
 </ul>
-<hr>
-<h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
-<li>定義CSS全域變數 <code>:root{ --變數名稱 : 變數值 }</code></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解決浮動問題"><a href="#解決浮動問題" class="headerlink" title="解決浮動問題"></a>解決浮動問題</h2><h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><pre><code>用來抵銷 float 屬性的作用
+
+1. left：消除左邊的浮動，元素被向下移動。
+2. right：消除右邊的浮動，元素被向下移動。
+3. both：消除左邊及右邊的浮動，元素被向下移動。
+4. none：不消除任何一邊的浮動，元素不會下移動。
+</code></pre><h4 id="實際解決方案："><a href="#實際解決方案：" class="headerlink" title="實際解決方案："></a>實際解決方案：</h4><pre><code>1. 浮動元素末尾添加一個空的標籤例如&lt;div style=”clear:both”&gt;
+2. 使用br標籤 &lt;br clear=&quot;all&quot; /&gt;
+3. 設置父元素overflow值設置為hidden或auto；
+4. 父元素也改為float屬性
+5. CSS Clearfix
+</code></pre><p><img src="https://internetingishard.com/html-and-css/floats/methods-for-clearing-floats-6429d9.png" alt=""></p>
+<iframe height="505" scrolling="no" title="float & clear" src="//codepen.io/runkids/embed/GGOmPP/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/GGOmPP/" target="_blank" rel="noopener">float &amp; clear</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<iframe height="265" scrolling="no" title="float overflow hidden" src="//codepen.io/runkids/embed/RJJojP/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/RJJojP/" target="_blank" rel="noopener">float overflow hidden</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<iframe height="1300" scrolling="no" title="float & clear" src="//codepen.io/runkids/embed/xzPyOE/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/xzPyOE/" target="_blank" rel="noopener">float &amp; clear</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="CSS-Clearfix-清除浮動"><a href="#CSS-Clearfix-清除浮動" class="headerlink" title="CSS Clearfix 清除浮動"></a>CSS Clearfix 清除浮動</h3><pre><code>是由Nicolas Gallagher所提出來的，同時也應該是目前最受歡迎的clearfix方法(bootstrap所採用)
+</code></pre><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  *zoom: 1; /*For IE 6&amp;7 only*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>使用變數 <code>var( --變數名稱 )</code></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--base);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>一般情況只需要after即可，加上before是為了避免發生『邊界重疊 ( Collapsing margins )』的問題</p>
 <ul>
-<li>使用data attribute 定義單位 ex. px ，如果值是顏色就不需要</li>
+<li><a href="http://culaidocf.blogspot.com/2013/02/clearfix.html" target="_blank" rel="noopener">.clearfix 的前世今生</a></li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"spacing"</span> <span class="attr">min</span>=<span class="string">"10"</span> <span class="attr">max</span>=<span class="string">"200"</span> <span class="attr">value</span>=<span class="string">"10"</span> <span class="attr">data-sizing</span>=<span class="string">"px"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"base"</span> <span class="attr">value</span>=<span class="string">"#ffc600"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://i0.wp.com/kgl.idv.tw/wp-content/uploads/2014/11/clearfix.gif?resize=700%2C394" alt=""></p>
+<iframe height="265" scrolling="no" title="clearfix" src="//codepen.io/runkids/embed/LrOoOL/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/LrOoOL/" target="_blank" rel="noopener">clearfix</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="其它參考"><a href="#其它參考" class="headerlink" title="其它參考:"></a>其它參考:</h3><p><a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank" rel="noopener">那些年我们一起清除过的浮动</a><br><a href="https://css-tricks.com/snippets/css/clear-fix/" target="_blank" rel="noopener">The Clearfix: Force an Element To Self-Clear its Children</a></p>
+<h2 id="建立全版面高的欄位"><a href="#建立全版面高的欄位" class="headerlink" title="建立全版面高的欄位"></a>建立全版面高的欄位</h2><p><img src="https://cdn.css-tricks.com/wp-content/uploads/2010/10/desire1.png" alt=""></p>
+<h4 id="1-flexbox-的-flex設定比例"><a href="#1-flexbox-的-flex設定比例" class="headerlink" title="1. flexbox 的 flex設定比例"></a>1. flexbox 的 flex設定比例</h4> <iframe height="265" scrolling="no" title="Flexbox Method" src="//codepen.io/chriscoyier/embed/raGKwM/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/chriscoyier/pen/raGKwM/" target="_blank" rel="noopener">Flexbox Method</a> by Chris Coyier  (<a href="https://codepen.io/chriscoyier" target="_blank" rel="noopener">@chriscoyier</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h4 id="2-使用table"><a href="#2-使用table" class="headerlink" title="2. 使用table"></a>2. 使用table</h4><p><a href="https://codepen.io/mariemosley/pen/232597be901e13ee8bed1b27e66c3102" target="_blank" rel="noopener">使用table</a></p>
+<iframe height="265" scrolling="no" title="wXPVQy" src="//codepen.io/runkids/embed/wXPVQy/?height=265&theme-id=0&default-tab=html,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/wXPVQy/" target="_blank" rel="noopener">wXPVQy</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h4 id="3-One-True-Layout"><a href="#3-One-True-Layout" class="headerlink" title="3. One True Layout"></a>3. One True Layout</h4><iframe height="265" scrolling="no" title="One True Layout Method" src="//codepen.io/runkids/embed/WyXVPy/?height=265&theme-id=0&default-tab=html,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/WyXVPy/" target="_blank" rel="noopener">One True Layout Method</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="參考自"><a href="#參考自" class="headerlink" title="參考自:"></a>參考自:</h3><p><a href="https://css-tricks.com/fluid-width-equal-height-columns/" target="_blank" rel="noopener">Fluid Width Equal Height Columns</a></p>
+<h2 id="避免掉落浮動"><a href="#避免掉落浮動" class="headerlink" title="避免掉落浮動"></a>避免掉落浮動</h2><h3 id="使用box-sizing"><a href="#使用box-sizing" class="headerlink" title="使用box sizing"></a>使用box sizing</h3><pre><code>box-sizing: content-box | padding-box | border-box
+content-box: 預設值。元素呈現的寬度是左右邊線粗系+CSS寬度+左右內距
+padding-box: 元素呈現的寬度是CSS寬度和左右內距，不含任何邊線
+border-box: 包含內距 邊線 CSS寬度
+</code></pre><iframe height="735" scrolling="no" title="gKoYzd" src="//codepen.io/runkids/embed/gKoYzd/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/gKoYzd/" target="_blank" rel="noopener">gKoYzd</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h2 id="CSS定位屬性"><a href="#CSS定位屬性" class="headerlink" title="CSS定位屬性"></a>CSS定位屬性</h2><h3 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h3><p><img src="https://internetingishard.com/html-and-css/advanced-positioning/css-positioning-schemes-790d5b.png" alt=""><br><img src="https://i.imgur.com/3TmCIHV.png" alt=""></p>
 <ul>
-<li>使用 JS 取得 data attribute 值，即我們定義的單位</li>
+<li>static: 只能動內外距 ， 在排版系統內</li>
+<li>relative: 可以簡易偏移，在排版系統內</li>
+<li>absolute: 絕對定位 ， 在排版系統外</li>
+<li>fixed: 視窗絕對定位 ， 在排版系統外</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> suffix = <span class="keyword">this</span>.dataset.sizing || <span class="string">' '</span> ; <span class="comment">//取得自定義屬性data-sizing，若沒有就給空值</span></span><br></pre></td></tr></table></figure>
+<p><code>float 和 absolute 及 fixed 無法同時作用在同一個元素上</code></p>
 <ul>
-<li>使用 JS 動態改變 CSS 變數值</li>
+<li>postion: absolute 較好的使用方式：<br>在外層元素上加上position: relative;<br>這樣絕對位置會依照外層元素而定，而不是瀏覽器視窗</li>
 </ul>
-<p>利用 <code>document.documentElement.style.setProperty( &#39;--變數名稱&#39;, &#39;變數值&#39; )</code> 動態改變 CSS，並且加上單位</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">`--<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>,<span class="keyword">this</span>.value+suffix);</span><br></pre></td></tr></table></figure>
-<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" title=":root" target="_blank" rel="noopener">:root</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" title="CSS濾鏡" target="_blank" rel="noopener">CSS濾鏡</a></p>
+<p><img src="https://i.imgur.com/eflGond.png" alt=""></p>
+<iframe height="665" scrolling="no" title="ZRRLPY" src="//codepen.io/runkids/embed/ZRRLPY/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/ZRRLPY/" target="_blank" rel="noopener">ZRRLPY</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h2 id="疊層元素"><a href="#疊層元素" class="headerlink" title="疊層元素"></a>疊層元素</h2><h3 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h3><ul>
+<li>數值越大，越接近頂層</li>
+<li>若有多個z-index數值較大的會出現在其它上方</li>
+<li>可以使用負數的z-index放在元素之後</li>
+<li>有些瀏覽器最大值為 2147483647</li>
+</ul>
+<h2 id="隱藏部分頁面"><a href="#隱藏部分頁面" class="headerlink" title="隱藏部分頁面"></a>隱藏部分頁面</h2><h4 id="visibility-vs-display-vs-opacity"><a href="#visibility-vs-display-vs-opacity" class="headerlink" title="visibility vs display vs opacity"></a>visibility <code>vs</code> display <code>vs</code> opacity</h4><ul>
+<li>使用 visibility:{hidden} 隱藏元素</li>
+<li>使用 visibility:{visible} 顯示元素</li>
+<li>visibility 的 <code>hidden</code> 與 dispaly 的 <code>none</code> 相似</li>
+<li>差異：<ul>
+<li>display:{none} 會完全從頁面移除</li>
+<li>visibility:{hidden} 會讓瀏覽器不顯示元素</li>
+<li>大多數開發者使用 display:{none}</li>
+</ul>
+</li>
+<li>opacity: 0 也可以隱藏元素，1則為顯示</li>
+<li>opacity 套用CSS動畫很好用</li>
+</ul>
+<iframe height="265" scrolling="no" title="隱藏顯示元素" src="//codepen.io/runkids/embed/jKKewm/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/jKKewm/" target="_blank" rel="noopener">隱藏顯示元素</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<p><a href="http://www.menucool.com/" target="_blank" rel="noopener">更多素材網站</a></p>
 
       
     </div>
@@ -466,7 +535,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/css/" rel="tag"># css</a>
           
         </div>
       
@@ -495,8 +564,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/vue/2017123101/" rel="next" title="使用Vue實做圖片預覽">
-                <i class="fa fa-chevron-left"></i> 使用Vue實做圖片預覽
+              <a href="/javascript/2018020101/" rel="next" title="[筆記] 理解 Set & WeakSet">
+                <i class="fa fa-chevron-left"></i> [筆記] 理解 Set & WeakSet
               </a>
             
           </div>
@@ -504,10 +573,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/js30days/2018010401/" rel="prev" title="[筆記][JS30天-Day04] Array Cardio Day1">
-                [筆記][JS30天-Day04] Array Cardio Day1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -673,7 +738,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用JS控制CSS來改變圖片效果"><span class="nav-number">1.</span> <span class="nav-text">實做：使用JS控制CSS來改變圖片效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立浮動版面"><span class="nav-number">1.</span> <span class="nav-text">建立浮動版面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#float"><span class="nav-number">1.1.</span> <span class="nav-text">float</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解決浮動問題"><span class="nav-number">2.</span> <span class="nav-text">解決浮動問題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clear"><span class="nav-number">2.1.</span> <span class="nav-text">clear</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#實際解決方案："><span class="nav-number">2.1.1.</span> <span class="nav-text">實際解決方案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-Clearfix-清除浮動"><span class="nav-number">2.2.</span> <span class="nav-text">CSS Clearfix 清除浮動</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它參考"><span class="nav-number">2.3.</span> <span class="nav-text">其它參考:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立全版面高的欄位"><span class="nav-number">3.</span> <span class="nav-text">建立全版面高的欄位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-flexbox-的-flex設定比例"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. flexbox 的 flex設定比例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用table"><span class="nav-number">3.0.2.</span> <span class="nav-text">2. 使用table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-One-True-Layout"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. One True Layout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#參考自"><span class="nav-number">3.1.</span> <span class="nav-text">參考自:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免掉落浮動"><span class="nav-number">4.</span> <span class="nav-text">避免掉落浮動</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用box-sizing"><span class="nav-number">4.1.</span> <span class="nav-text">使用box sizing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS定位屬性"><span class="nav-number">5.</span> <span class="nav-text">CSS定位屬性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Position"><span class="nav-number">5.1.</span> <span class="nav-text">Position</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疊層元素"><span class="nav-number">6.</span> <span class="nav-text">疊層元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#z-index"><span class="nav-number">6.1.</span> <span class="nav-text">z-index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隱藏部分頁面"><span class="nav-number">7.</span> <span class="nav-text">隱藏部分頁面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#visibility-vs-display-vs-opacity"><span class="nav-number">7.0.1.</span> <span class="nav-text">visibility vs display vs opacity</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -830,9 +895,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/js30days/2018010101/';
-          this.page.identifier = 'js30days/2018010101/';
-          this.page.title = '[筆記][JS30天-Day03] Playing with CSS Variables and JS';
+          this.page.url = 'https://runkids.github.io/css/2018021101/';
+          this.page.identifier = 'css/2018021101/';
+          this.page.title = '[CSS] Float & Position';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://runkids.disqus.com/embed.js';
