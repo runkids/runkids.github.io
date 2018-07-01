@@ -85,20 +85,18 @@
 
 
 
-<meta name="description" content="實做：使用CSS + JS 做出時鐘See the Pen JS30Days02 by Hung Wei Heng (@runkids) on CodePen.   學習重點 CSS 旋轉效果 獲取時間換算角度 利用 javascript 控制 CSS   解說 會用到以下CSS  1234transform-oragintransform: rotate()transition: all 0.">
+<meta name="description" content="Map  傳統上我們使用 Object 建立 key/value-pair 資料結構，來模擬 maps。但缺點是無法使用非字串值的key。ES6的Map就解決這樣的問題了！ 123456789const m = &amp;#123;&amp;#125;;const x = &amp;#123;id:1&amp;#125;,      y = &amp;#123;id:2&amp;#125;;m[x] = &quot;foo&quot;; // 這裡的key變成 [">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[筆記][JS30天-Day02] CSS + JS Clock">
-<meta property="og:url" content="https://runkids.github.io/js30days/2017123001/index.html">
+<meta property="og:title" content="[筆記] 理解 Map(映射) &amp; WeakMap(弱映射)">
+<meta property="og:url" content="https://runkids.github.io/javascript/2018020102/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
-<meta property="og:description" content="實做：使用CSS + JS 做出時鐘See the Pen JS30Days02 by Hung Wei Heng (@runkids) on CodePen.   學習重點 CSS 旋轉效果 獲取時間換算角度 利用 javascript 控制 CSS   解說 會用到以下CSS  1234transform-oragintransform: rotate()transition: all 0.">
+<meta property="og:description" content="Map  傳統上我們使用 Object 建立 key/value-pair 資料結構，來模擬 maps。但缺點是無法使用非字串值的key。ES6的Map就解決這樣的問題了！ 123456789const m = &amp;#123;&amp;#125;;const x = &amp;#123;id:1&amp;#125;,      y = &amp;#123;id:2&amp;#125;;m[x] = &quot;foo&quot;; // 這裡的key變成 [">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://goo.gl/ChS3iv">
-<meta property="og:updated_time" content="2018-06-29T01:44:45.960Z">
+<meta property="og:updated_time" content="2018-07-01T10:40:29.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[筆記][JS30天-Day02] CSS + JS Clock">
-<meta name="twitter:description" content="實做：使用CSS + JS 做出時鐘See the Pen JS30Days02 by Hung Wei Heng (@runkids) on CodePen.   學習重點 CSS 旋轉效果 獲取時間換算角度 利用 javascript 控制 CSS   解說 會用到以下CSS  1234transform-oragintransform: rotate()transition: all 0.">
-<meta name="twitter:image" content="https://goo.gl/ChS3iv">
+<meta name="twitter:title" content="[筆記] 理解 Map(映射) &amp; WeakMap(弱映射)">
+<meta name="twitter:description" content="Map  傳統上我們使用 Object 建立 key/value-pair 資料結構，來模擬 maps。但缺點是無法使用非字串值的key。ES6的Map就解決這樣的問題了！ 123456789const m = &amp;#123;&amp;#125;;const x = &amp;#123;id:1&amp;#125;,      y = &amp;#123;id:2&amp;#125;;m[x] = &quot;foo&quot;; // 這裡的key變成 [">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/js30days/2017123001/"/>
+  <link rel="canonical" href="https://runkids.github.io/javascript/2018020102/"/>
 
 
 
 
 
-  <title>[筆記][JS30天-Day02] CSS + JS Clock | 威力的學習記錄於此</title>
+  <title>[筆記] 理解 Map(映射) & WeakMap(弱映射) | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -313,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2017123001/">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/javascript/2018020102/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Willy Hong">
@@ -330,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day02] CSS + JS Clock</h1>
+          <h1 class="post-title" itemprop="name headline">[筆記] 理解 Map(映射) & WeakMap(弱映射)</h1>
         
 
         <div class="post-meta">
@@ -342,8 +340,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-12-30T12:31:08+08:00">
-                2017-12-30
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-01T19:42:10+08:00">
+                2018-02-01
               </time>
             
 
@@ -365,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js30days/" itemprop="url" rel="index">
-                    <span itemprop="name">JS30天學習筆記系列</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -383,9 +381,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/js30days/2017123001/#comments" itemprop="discussionUrl">
+                <a href="/javascript/2018020102/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="js30days/2017123001/" itemprop="commentCount"></span>
+                        data-disqus-identifier="javascript/2018020102/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,39 +416,98 @@
       
 
       
-        <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
-<h5 id="實做：使用CSS-JS-做出時鐘"><a href="#實做：使用CSS-JS-做出時鐘" class="headerlink" title="實做：使用CSS + JS 做出時鐘"></a>實做：使用CSS + JS 做出時鐘</h5><iframe height="400" scrolling="no" title="JS30Days02" src="//codepen.io/runkids/embed/JMNWrP/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/JMNWrP/" target="_blank" rel="noopener">JS30Days02</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
-
-<hr>
-<h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
-<li>CSS 旋轉效果</li>
-<li>獲取時間換算角度</li>
-<li>利用 javascript 控制 CSS</li>
+        <h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><hr>
+<ul>
+<li><p>傳統上我們使用 Object 建立 key/value-pair 資料結構，來模擬 maps。<br>但缺點是無法使用非字串值的key。ES6的Map就解決這樣的問題了！</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> x = &#123;<span class="attr">id</span>:<span class="number">1</span>&#125;,</span><br><span class="line">      y = &#123;<span class="attr">id</span>:<span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">m[x] = <span class="string">"foo"</span>; <span class="comment">// 這裡的key變成 [object Objec]</span></span><br><span class="line">m[y] = <span class="string">"bar"</span>; <span class="comment">// 這裡的key變成 [object Objec]</span></span><br><span class="line"></span><br><span class="line">m[x]; <span class="comment">// bar</span></span><br><span class="line">m[y]; <span class="comment">// bar</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">const</span> x = &#123;<span class="attr">id</span>:<span class="number">1</span>&#125;,</span><br><span class="line">      y = &#123;<span class="attr">id</span>:<span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">m.set(x,<span class="string">"foo"</span>);</span><br><span class="line">m.set(y,<span class="string">"bar"</span>);</span><br><span class="line"></span><br><span class="line">m.get(x); <span class="comment">// foo</span></span><br><span class="line">m.get(y); <span class="comment">// bar</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set(key,value)</p>
+<ul>
+<li>替 Map 新增一個鍵/值並回傳該Map</li>
+<li>key 可以是任何型態</li>
+<li>如果key已經存在，則會蓋掉原有的值</li>
+<li><p>set方法會返回該Map，所以可以一直串接</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">m.set(<span class="string">'edition'</span>, <span class="number">6</span>)</span><br><span class="line">m.set(<span class="number">262</span>, <span class="string">'standard'</span>)</span><br><span class="line">m.set(<span class="literal">undefined</span>, <span class="string">'nah'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">.set(<span class="number">1</span>, <span class="string">'a'</span>)</span><br><span class="line">.set(<span class="number">2</span>, <span class="string">'b'</span>)</span><br><span class="line">.set(<span class="number">3</span>, <span class="string">'c'</span>);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<hr>
-<h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
-<li>會用到以下CSS</li>
+</li>
+<li><p>get(key)</p>
+<ul>
+<li>讀取對應key的鍵值，若找不到回傳 <code>undefined</code></li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform-oragin</span></span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>()</span><br><span class="line"><span class="selector-tag">transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.05s</span></span><br><span class="line"><span class="selector-tag">transition-timing-function</span>: <span class="selector-tag">cubic-bezier</span>(<span class="selector-tag">x</span>, <span class="selector-tag">x</span>, <span class="selector-tag">x</span>, <span class="selector-tag">x</span>)</span><br></pre></td></tr></table></figure>
-<ol>
-<li>transform-oragin : 調整指針初始位置</li>
-<li>transform: rotate() ：指針角度控制</li>
-<li>transition ：指針跳動的過渡效果</li>
-<li>transition-timing-function : 呈現指針會有滴答滴答的效果</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">const</span> func = <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>)&#125;;</span><br><span class="line">m.set(func,<span class="string">'Hello Map'</span>);</span><br><span class="line">m.get(func) <span class="comment">//Hello Map</span></span><br><span class="line">m.get(<span class="string">'hi'</span>) <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>size</p>
+<ul>
+<li>返回Map成員的總數量 <code>new Map().size ;</code></li>
+</ul>
+</li>
+<li><p>delete(key)</p>
+<ul>
+<li><p>刪除key的某個值，返回布林值，true代表刪除成功</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">m.set(<span class="literal">undefined</span>, <span class="string">'nah'</span>);</span><br><span class="line">m.has(<span class="literal">undefined</span>)     <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">m.delete(<span class="literal">undefined</span>)</span><br><span class="line">m.has(<span class="literal">undefined</span>)       <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>has(key)</p>
+<ul>
+<li><p>返回布林值，判斷某個key是否存在Map中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">m.set(<span class="string">'edition'</span>, <span class="number">6</span>);</span><br><span class="line">m.set(<span class="number">262</span>, <span class="string">'standard'</span>);</span><br><span class="line">m.set(<span class="literal">undefined</span>, <span class="string">'nah'</span>);</span><br><span class="line"></span><br><span class="line">m.has(<span class="string">'edition'</span>) <span class="comment">// true</span></span><br><span class="line">m.has(<span class="string">'years'</span>) <span class="comment">// false</span></span><br><span class="line">m.has(<span class="number">262</span>) <span class="comment">// true</span></span><br><span class="line">m.has(<span class="literal">undefined</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>clear</p>
+<ul>
+<li>刪除Map所有值，不會返回值 <code>new Map().clear() ;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Map-迭代"><a href="#Map-迭代" class="headerlink" title="Map 迭代"></a>Map 迭代</h4><ol>
+<li>keys()</li>
+<li>values()</li>
+<li>entries()</li>
+<li>forEach()</li>
+<li>Map迭代順序是依照加入的順序</li>
+<li><p>Map 結構的默認遍歷器接口（Symbol.iterator屬性），就是entries方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map[<span class="built_in">Symbol</span>.iterator] === map.entries <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="string">'F'</span>, <span class="string">'no'</span>],</span><br><span class="line">  [<span class="string">'T'</span>,  <span class="string">'yes'</span>],</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> map.keys()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "F"</span></span><br><span class="line"><span class="comment">// "T"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> map.values()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "no"</span></span><br><span class="line"><span class="comment">// "yes"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> map.entries()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item[<span class="number">0</span>], item[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "F" "no"</span></span><br><span class="line"><span class="comment">// "T" "yes"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> map.entries()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key, value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "F" "no"</span></span><br><span class="line"><span class="comment">// "T" "yes"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同於使用map.entries()</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> map) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key, value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// "F" "no"</span></span><br><span class="line"><span class="comment">// "T" "yes"</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <ul>
-<li>利用 setInterval 每秒更新指針角度</li>
+<li><p>Map 轉為陣列幾種方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="number">1</span>, <span class="string">'one'</span>],</span><br><span class="line">  [<span class="number">2</span>, <span class="string">'two'</span>],</span><br><span class="line">  [<span class="number">3</span>, <span class="string">'three'</span>],</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">[...map.keys()]</span><br><span class="line"><span class="comment">// [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">[...map.values()]</span><br><span class="line"><span class="comment">// ['one', 'two', 'three']</span></span><br><span class="line"></span><br><span class="line">[...map.entries()]</span><br><span class="line"><span class="comment">// [[1,'one'], [2, 'two'], [3, 'three']]</span></span><br><span class="line"></span><br><span class="line">[...map]</span><br><span class="line"><span class="comment">// [[1,'one'], [2, 'two'], [3, 'three']]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>forEach<br>與陣列forEach相似</p>
+</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>, 1000);</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="WeekSet"><a href="#WeekSet" class="headerlink" title="WeekSet"></a>WeekSet</h3><ul>
+<li><code>WeekSet</code> 與 <code>map</code> 外部行為大致相同</li>
+<li>只接受物件作為鍵值，若物件本身被GC了，<code>WeekSet</code>中的條目(entry)也會被移除</li>
+<li>沒有size特性，也沒有clear()方法，也沒有提供任何迭代方法</li>
+<li><p>承上<code>WeakMap</code>只有四個方法可用：get()、set()、has()、delete()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> WeekMap();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> x = &#123;<span class="attr">id</span>:<span class="number">1</span>&#125;,</span><br><span class="line">    y = &#123;<span class="attr">id</span>:<span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">m.set(x,<span class="string">"foo"</span>);</span><br><span class="line"></span><br><span class="line">m.has(x); <span class="comment">// true</span></span><br><span class="line">m.has(y); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果作為map鍵值的物件會被刪除或可能被GC，那麼<code>WeekMap</code>會是更好的選擇</p>
+</li>
+<li><p>WeakMap 的用途例子</p>
 <ul>
-<li>獲取時間並換算角度</li>
+<li><p>DOM 作為鍵名</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">let</span> myElement = <span class="built_in">document</span>.getElementById(<span class="string">'logo'</span>);</span><br><span class="line">  <span class="keyword">let</span> myWeakmap = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line"></span><br><span class="line">  myWeakmap.set(myElement, &#123;<span class="attr">timesClicked</span>: <span class="number">0</span>&#125;);</span><br><span class="line"></span><br><span class="line">  myElement.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> logoData = myWeakmap.get(myElement);</span><br><span class="line">    logoData.timesClicked++;</span><br><span class="line">  &#125;, <span class="literal">false</span>);</span><br><span class="line"><span class="comment">/*一旦這個 DOM 節點刪除，該狀態就會自動消失，不存在內存洩漏風險*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>私有屬性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">const</span> _counter = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line">  <span class="keyword">const</span> _action = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Countdown</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(counter, action) &#123;</span><br><span class="line">      _counter.set(<span class="keyword">this</span>, counter);</span><br><span class="line">      _action.set(<span class="keyword">this</span>, action);</span><br><span class="line">    &#125;</span><br><span class="line">    dec() &#123;</span><br><span class="line">      <span class="keyword">let</span> counter = _counter.get(<span class="keyword">this</span>);</span><br><span class="line">      <span class="keyword">if</span> (counter &lt; <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">      counter--;</span><br><span class="line">      _counter.set(<span class="keyword">this</span>, counter);</span><br><span class="line">      <span class="keyword">if</span> (counter === <span class="number">0</span>) &#123;</span><br><span class="line">        _action.get(<span class="keyword">this</span>)();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> c = <span class="keyword">new</span> Countdown(<span class="number">2</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'DONE'</span>));</span><br><span class="line"></span><br><span class="line">  c.dec()</span><br><span class="line">  c.dec() <span class="comment">// DONE</span></span><br><span class="line"><span class="comment">/* 一旦c被刪除，Countdown 內部的 _counter和_action也就隨之消失，不會造成內存洩漏 */</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> sec = now.getSeconds();</span><br><span class="line"><span class="keyword">let</span> secDeg = (sec/<span class="number">60</span>) * <span class="number">360</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>操作CSS</li>
+</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> secHand = <span class="built_in">document</span>.querySelector(<span class="string">".sec-hand"</span>);</span><br><span class="line">secHand.style.transform = <span class="string">`rotate(<span class="subst">$&#123;secDeg+<span class="number">90</span>&#125;</span>deg) scale(0.9, 0.5)`</span>;</span><br></pre></td></tr></table></figure>
-<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin" title="transform-origin" target="_blank" rel="noopener">transform-origin</a></p>
+<hr>
+<h4 id="參考資料來源"><a href="#參考資料來源" class="headerlink" title="參考資料來源"></a>參考資料來源</h4><ol>
+<li><a href="http://es6.ruanyifeng.com/#docs/set-map" title="Set 和 Map 数据结构" target="_blank" rel="noopener">Set 和 Map 数据结构</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" title="MDN - Map" target="_blank" rel="noopener">MDN - Map</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap" title="MDN - WeakMap" target="_blank" rel="noopener">MDN - WeakMap</a></li>
+</ol>
 
       
     </div>
@@ -497,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/js30days/2017122901/" rel="next" title="[筆記][JS30天-Day01] JavaScript Drum Kit">
-                <i class="fa fa-chevron-left"></i> [筆記][JS30天-Day01] JavaScript Drum Kit
+              <a href="/javascript/2018020101/" rel="next" title="[筆記] 理解 Set(集合) & WeakSet(弱集合)">
+                <i class="fa fa-chevron-left"></i> [筆記] 理解 Set(集合) & WeakSet(弱集合)
               </a>
             
           </div>
@@ -507,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/vue/2017123101/" rel="prev" title="使用Vue實做圖片預覽">
-                使用Vue實做圖片預覽 <i class="fa fa-chevron-right"></i>
+              <a href="/css/2018021101/" rel="prev" title="[CSS] Float & Position">
+                [CSS] Float & Position <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -675,7 +732,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：使用CSS-JS-做出時鐘"><span class="nav-number">1.</span> <span class="nav-text">實做：使用CSS + JS 做出時鐘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map-迭代"><span class="nav-number">1.1.</span> <span class="nav-text">Map 迭代</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeekSet"><span class="nav-number">2.</span> <span class="nav-text">WeekSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#參考資料來源"><span class="nav-number">2.1.</span> <span class="nav-text">參考資料來源</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -832,9 +889,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/js30days/2017123001/';
-          this.page.identifier = 'js30days/2017123001/';
-          this.page.title = '[筆記][JS30天-Day02] CSS + JS Clock';
+          this.page.url = 'https://runkids.github.io/javascript/2018020102/';
+          this.page.identifier = 'javascript/2018020102/';
+          this.page.title = '[筆記] 理解 Map(映射) & WeakMap(弱映射)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://runkids.disqus.com/embed.js';

@@ -88,14 +88,14 @@
 <meta name="description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[筆記] 理解 Set &amp; WeakSet">
+<meta property="og:title" content="[筆記] 理解 Set(集合) &amp; WeakSet(弱集合)">
 <meta property="og:url" content="https://runkids.github.io/javascript/2018020101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
 <meta property="og:description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-06-29T04:35:18.407Z">
+<meta property="og:updated_time" content="2018-07-01T09:15:39.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[筆記] 理解 Set &amp; WeakSet">
+<meta name="twitter:title" content="[筆記] 理解 Set(集合) &amp; WeakSet(弱集合)">
 <meta name="twitter:description" content="Set  可以儲存任何類型的唯一值，不論型別或物件 123456new Set([iterable]);const set = new Set([1, 2, 3, 4, 4]);//去除重複成員的寫法Array.from( set )  // 1,2,3,4[ ...set ]  // 1,2,3,4  add  替 Set 新增一個值並回傳 Set Object 1234567891011121">
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <title>[筆記] 理解 Set & WeakSet | 威力的學習記錄於此</title>
+  <title>[筆記] 理解 Set(集合) & WeakSet(弱集合) | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[筆記] 理解 Set & WeakSet</h1>
+          <h1 class="post-title" itemprop="name headline">[筆記] 理解 Set(集合) & WeakSet(弱集合)</h1>
         
 
         <div class="post-meta">
@@ -424,7 +424,7 @@
 <li><p>add</p>
 <ul>
 <li><p>替 Set 新增一個值並回傳 Set Object</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> mySet = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">mySet.add(<span class="string">'1'</span>); <span class="comment">// String</span></span><br><span class="line">mySet.add(<span class="number">2</span>); <span class="comment">// Number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;;</span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">// Object</span></span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">//因obj是參考同一個物件，因次會被濾掉</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//和obj是參考不同的物件，所以這個可以被Set新增</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//同上，因為是全新的一個參考，所以這個也會被Set新增</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = <span class="literal">NaN</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="literal">NaN</span>;</span><br><span class="line">mySet.add(a);</span><br><span class="line">mySet.add(b); <span class="comment">// Set 判斷 NaN 是相等的 </span></span><br><span class="line"></span><br><span class="line">mySet.forEach(<span class="function"><span class="params">item</span>=&gt;</span><span class="built_in">console</span>.log(item)); </span><br><span class="line"><span class="comment">// "1" , 2 , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , NaN</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> mySet = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">mySet.add(<span class="string">'1'</span>); <span class="comment">// String</span></span><br><span class="line">mySet.add(<span class="number">2</span>); <span class="comment">// Number</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;;</span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">// Object</span></span><br><span class="line"></span><br><span class="line">mySet.add(obj); <span class="comment">//因obj是參考同一個物件，因此會被濾掉</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//和obj是參考不同的物件，所以這個可以被Set新增</span></span><br><span class="line"></span><br><span class="line">mySet.add(&#123;<span class="attr">key</span>:<span class="string">'hello'</span>&#125;); <span class="comment">//同上，因為是全新的一個參考，所以這個也會被Set新增</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = <span class="literal">NaN</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="literal">NaN</span>;</span><br><span class="line">mySet.add(a);</span><br><span class="line">mySet.add(b); <span class="comment">// Set 判斷 NaN 是相等的 </span></span><br><span class="line"></span><br><span class="line">mySet.forEach(<span class="function"><span class="params">item</span>=&gt;</span><span class="built_in">console</span>.log(item)); </span><br><span class="line"><span class="comment">// "1" , 2 , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , &#123; key: "hello" &#125; , NaN</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -435,7 +435,7 @@
 </li>
 <li><p>delete  </p>
 <ul>
-<li><p>刪除Set的某個值，返回布林值，代表刪除成功</p>
+<li><p>刪除Set的某個值，返回布林值，true代表刪除成功</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>]);</span><br><span class="line">set.delete(<span class="number">1</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -517,6 +517,25 @@
 </li>
 </ul>
 <hr>
+<h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><ul>
+<li><p>Set</p>
+<ol>
+<li>也可是迭代</li>
+<li>建構子也可以接受一個可迭代物件傳入</li>
+<li>具有size屬性</li>
+<li>值可以是任意值或物件參考</li>
+<li>值必須唯一</li>
+<li>中 NaN === NaN</li>
+<li>沒有鍵/值，它是一維的，可視為陣列，只是值不會重複</li>
+</ol>
+</li>
+<li><p>WeekSet</p>
+<ol>
+<li>無法進行迭代,但建構子可接受一個可迭代物件傳入</li>
+</ol>
+</li>
+</ul>
+<hr>
 <h4 id="參考資料來源"><a href="#參考資料來源" class="headerlink" title="參考資料來源"></a>參考資料來源</h4><ol>
 <li><a href="http://es6.ruanyifeng.com/#docs/set-map" title="Set 和 Map 数据结构" target="_blank" rel="noopener">Set 和 Map 数据结构</a></li>
 <li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set" title="MDN - Set" target="_blank" rel="noopener">MDN - Set</a></li>
@@ -578,8 +597,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/css/2018021101/" rel="prev" title="[CSS] Float & Position">
-                [CSS] Float & Position <i class="fa fa-chevron-right"></i>
+              <a href="/javascript/2018020102/" rel="prev" title="[筆記] 理解 Map(映射) & WeakMap(弱映射)">
+                [筆記] 理解 Map(映射) & WeakMap(弱映射) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -668,7 +687,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -746,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-迭代"><span class="nav-number">1.1.</span> <span class="nav-text">Set 迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改變Set結構"><span class="nav-number">1.2.</span> <span class="nav-text">改變Set結構</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeekSet"><span class="nav-number">2.</span> <span class="nav-text">WeekSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#參考資料來源"><span class="nav-number">2.1.</span> <span class="nav-text">參考資料來源</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-迭代"><span class="nav-number">1.1.</span> <span class="nav-text">Set 迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改變Set結構"><span class="nav-number">1.2.</span> <span class="nav-text">改變Set結構</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeekSet"><span class="nav-number">2.</span> <span class="nav-text">WeekSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#總結"><span class="nav-number">2.1.</span> <span class="nav-text">總結</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#參考資料來源"><span class="nav-number">2.2.</span> <span class="nav-text">參考資料來源</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -905,7 +924,7 @@
         var disqus_config = function () {
           this.page.url = 'https://runkids.github.io/javascript/2018020101/';
           this.page.identifier = 'javascript/2018020101/';
-          this.page.title = '[筆記] 理解 Set & WeakSet';
+          this.page.title = '[筆記] 理解 Set(集合) & WeakSet(弱集合)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://runkids.disqus.com/embed.js';
