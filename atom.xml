@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2018-06-29T07:33:46.974Z</updated>
+  <updated>2018-07-07T12:02:40.079Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[小技巧] flex 搭配 margin 上下左右置中</title>
+    <link href="https://runkids.github.io/css/2018021301/"/>
+    <id>https://runkids.github.io/css/2018021301/</id>
+    <published>2018-02-13T03:42:10.000Z</published>
+    <updated>2018-07-07T12:02:40.079Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="flex-搭配-margin-上下左右置中"><a href="#flex-搭配-margin-上下左右置中" class="headerlink" title="flex 搭配 margin 上下左右置中"></a>flex 搭配 margin 上下左右置中</h3><ul><li><p>當外層元素display為flex時，內層元素只要使用 <code>margin : auto ;</code> 就可以簡單達到上下左右置中效果</p></li><li><p>範例如下：</p></li></ul><iframe height="265" scrolling="no" title="Flex & Margin Auto" src="//codepen.io/runkids/embed/QxeKXW/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/QxeKXW/" target="_blank" rel="noopener">Flex &amp; Margin Auto</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;flex-搭配-margin-上下左右置中&quot;&gt;&lt;a href=&quot;#flex-搭配-margin-上下左右置中&quot; class=&quot;headerlink&quot; title=&quot;flex 搭配 margin 上下左右置中&quot;&gt;&lt;/a&gt;flex 搭配 margin 上下左右置中&lt;/
+      
+    
+    </summary>
+    
+      <category term="css" scheme="https://runkids.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://runkids.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>[CSS] Float &amp; Position</title>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[小技巧] flex 搭配 margin 上下左右置中]]></title>
+    <url>%2Fcss%2F2018021301%2F</url>
+    <content type="text"><![CDATA[flex 搭配 margin 上下左右置中 當外層元素display為flex時，內層元素只要使用 margin : auto ; 就可以簡單達到上下左右置中效果 範例如下： See the Pen Flex &amp; Margin Auto by Hung Wei Heng (@runkids) on CodePen.]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[[CSS] Float & Position]]></title>
     <url>%2Fcss%2F2018021101%2F</url>
     <content type="text"><![CDATA[建立浮動版面建立浮動的圖像應預先設定好寬度，且盡量使用百分比來設計，這樣可以根據螢幕尺寸自動調整，更容易建立響應式網頁免費模版 floatfloat 屬性有 left | right | none 1. left The element must float on the left side of its containing block. 2. right The element must float on the right side of its containing block. 3. none The element must not float. 以下圖為例，其中有兩個向左浮動，一個向右浮動。要注意到第二個向左浮動的正方形被放在第一個向左浮動的正方形的右邊。如果還有更多的正方形這樣浮動，它們會繼續向右堆放，直到填滿容器一整行，之後換行至下一行 解決浮動問題clear用來抵銷 float 屬性的作用 1. left：消除左邊的浮動，元素被向下移動。 2. right：消除右邊的浮動，元素被向下移動。 3. both：消除左邊及右邊的浮動，元素被向下移動。 4. none：不消除任何一邊的浮動，元素不會下移動。 實際解決方案：1. 浮動元素末尾添加一個空的標籤例如&lt;div style=”clear:both”&gt; 2. 使用br標籤 &lt;br clear=&quot;all&quot; /&gt; 3. 設置父元素overflow值設置為hidden或auto； 4. 父元素也改為float屬性 5. CSS Clearfix See the Pen float &amp; clear by Hung Wei Heng (@runkids) on CodePen. See the Pen float overflow hidden by Hung Wei Heng (@runkids) on CodePen. See the Pen float &amp; clear by Hung Wei Heng (@runkids) on CodePen. CSS Clearfix 清除浮動是由Nicolas Gallagher所提出來的，同時也應該是目前最受歡迎的clearfix方法(bootstrap所採用) 1234567891011.clearfix:before,.clearfix:after &#123; content: ""; display: table;&#125;.clearfix:after &#123; clear: both;&#125;.clearfix &#123; *zoom: 1; /*For IE 6&amp;7 only*/&#125; 一般情況只需要after即可，加上before是為了避免發生『邊界重疊 ( Collapsing margins )』的問題 .clearfix 的前世今生 See the Pen clearfix by Hung Wei Heng (@runkids) on CodePen. 其它參考:那些年我们一起清除过的浮动The Clearfix: Force an Element To Self-Clear its Children 建立全版面高的欄位 1. flexbox 的 flex設定比例 See the Pen Flexbox Method by Chris Coyier (@chriscoyier) on CodePen. 2. 使用table使用table See the Pen wXPVQy by Hung Wei Heng (@runkids) on CodePen. 3. One True LayoutSee the Pen One True Layout Method by Hung Wei Heng (@runkids) on CodePen. 參考自:Fluid Width Equal Height Columns 避免掉落浮動使用box sizingbox-sizing: content-box | padding-box | border-box content-box: 預設值。元素呈現的寬度是左右邊線粗系+CSS寬度+左右內距 padding-box: 元素呈現的寬度是CSS寬度和左右內距，不含任何邊線 border-box: 包含內距 邊線 CSS寬度 See the Pen gKoYzd by Hung Wei Heng (@runkids) on CodePen. CSS定位屬性Position static: 只能動內外距 ， 在排版系統內 relative: 可以簡易偏移，在排版系統內 absolute: 絕對定位 ， 在排版系統外 fixed: 視窗絕對定位 ， 在排版系統外 float 和 absolute 及 fixed 無法同時作用在同一個元素上 postion: absolute 較好的使用方式：在外層元素上加上position: relative;這樣絕對位置會依照外層元素而定，而不是瀏覽器視窗 See the Pen ZRRLPY by Hung Wei Heng (@runkids) on CodePen. 疊層元素z-index 數值越大，越接近頂層 若有多個z-index數值較大的會出現在其它上方 可以使用負數的z-index放在元素之後 有些瀏覽器最大值為 2147483647 隱藏部分頁面visibility vs display vs opacity 使用 visibility:{hidden} 隱藏元素 使用 visibility:{visible} 顯示元素 visibility 的 hidden 與 dispaly 的 none 相似 差異： display:{none} 會完全從頁面移除 visibility:{hidden} 會讓瀏覽器不顯示元素 大多數開發者使用 display:{none} opacity: 0 也可以隱藏元素，1則為顯示 opacity 套用CSS動畫很好用 See the Pen 隱藏顯示元素 by Hung Wei Heng (@runkids) on CodePen. 更多素材網站]]></content>
