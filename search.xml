@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用.sync修飾符對props進行雙向綁定]]></title>
+    <url>%2Fvue%2F2018022001%2F</url>
+    <content type="text"><![CDATA[使用.sync實做雙向綁定注意：此文是記錄 Vue 2.3.0 .sync 而不是1.0的 Demo 用法：以Demo為例 當子組件的 childrenText 發生變化時，使用update:my-prop-name的模式觸發 emit 1this.$emit("update:parentText", e); 而父組件監聽該事件 （先看原本的寫法 1&lt;Children :parentText="text" @update:parentText="e=&gt;text=e"/&gt; 改成使用.sync，達到同樣效果 1&lt;Children :parentText.sync="text"/&gt; 資源參考sync-修饰符]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[[小技巧] flex 搭配 margin 上下左右置中]]></title>
     <url>%2Fcss%2F2018021301%2F</url>
     <content type="text"><![CDATA[flex 搭配 margin 上下左右置中 當外層元素display為flex時，內層元素只要使用 margin : auto ; 就可以簡單達到上下左右置中效果 範例如下： See the Pen Flex &amp; Margin Auto by Hung Wei Heng (@runkids) on CodePen.]]></content>

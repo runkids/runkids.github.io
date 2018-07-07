@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2018-07-07T12:02:40.079Z</updated>
+  <updated>2018-07-07T16:36:49.674Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用.sync修飾符對props進行雙向綁定</title>
+    <link href="https://runkids.github.io/vue/2018022001/"/>
+    <id>https://runkids.github.io/vue/2018022001/</id>
+    <published>2018-02-20T11:01:25.000Z</published>
+    <updated>2018-07-07T16:36:49.674Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用-sync實做雙向綁定"><a href="#使用-sync實做雙向綁定" class="headerlink" title="使用.sync實做雙向綁定"></a>使用.sync實做雙向綁定</h2><h6 id="注意：此文是記錄-Vue-2-3-0-sync-而不是1-0的"><a href="#注意：此文是記錄-Vue-2-3-0-sync-而不是1-0的" class="headerlink" title="注意：此文是記錄 Vue 2.3.0 .sync 而不是1.0的"></a>注意：此文是記錄 Vue 2.3.0 .sync 而不是1.0的</h6><ul><li>Demo  <iframe src="https://codesandbox.io/embed/j28m5mw4n3" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe></li></ul><ul><li><p>用法：以Demo為例</p><ul><li><p>當子組件的 childrenText 發生變化時，使用<code>update:my-prop-name</code>的模式觸發 emit</p>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$emit(<span class="string">"update:parentText"</span>, e);</span><br></pre></td></tr></table></figure></li><li><p>而父組件監聽該事件 （先看原本的寫法</p>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Children :parentText=<span class="string">"text"</span> @update:parentText=<span class="string">"e=&gt;text=e"</span>/&gt;</span><br></pre></td></tr></table></figure></li><li><p>改成使用.sync，達到同樣效果</p>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Children :parentText.sync=<span class="string">"text"</span>/&gt;</span><br></pre></td></tr></table></figure></li></ul></li></ul><h5 id="資源參考"><a href="#資源參考" class="headerlink" title="資源參考"></a>資源參考</h5><p><a href="https://cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6" title="sync-修饰符" target="_blank" rel="noopener">sync-修饰符</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;使用-sync實做雙向綁定&quot;&gt;&lt;a href=&quot;#使用-sync實做雙向綁定&quot; class=&quot;headerlink&quot; title=&quot;使用.sync實做雙向綁定&quot;&gt;&lt;/a&gt;使用.sync實做雙向綁定&lt;/h2&gt;&lt;h6 id=&quot;注意：此文是記錄-Vue-2-3-0-sy
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://runkids.github.io/categories/vue/"/>
+    
+    
+      <category term="vue" scheme="https://runkids.github.io/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>[小技巧] flex 搭配 margin 上下左右置中</title>
