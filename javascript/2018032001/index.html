@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -85,13 +85,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="威力的學習記錄於此">
-<meta property="og:url" content="https://runkids.github.io/categories/vue/index.html">
+<meta name="description" content="一般函式的this 直接執行 -&amp;gt; window 作為物件成員函示執行 -&amp;gt; 該物件本身 作為 DOM 事件監聽函示 -&amp;gt; 該 DOM 作為建構函式 -&amp;gt; 建構出來的實例  12345678910111213141516171819202122232425262728293031console.log(this); // windowfunction a ()&amp;#123;">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[筆記] 搞懂 javascript 的 this">
+<meta property="og:url" content="https://runkids.github.io/javascript/2018032001/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
+<meta property="og:description" content="一般函式的this 直接執行 -&amp;gt; window 作為物件成員函示執行 -&amp;gt; 該物件本身 作為 DOM 事件監聽函示 -&amp;gt; 該 DOM 作為建構函式 -&amp;gt; 建構出來的實例  12345678910111213141516171819202122232425262728293031console.log(this); // windowfunction a ()&amp;#123;">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-07-08T17:17:42.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="威力的學習記錄於此">
+<meta name="twitter:title" content="[筆記] 搞懂 javascript 的 this">
+<meta name="twitter:description" content="一般函式的this 直接執行 -&amp;gt; window 作為物件成員函示執行 -&amp;gt; 該物件本身 作為 DOM 事件監聽函示 -&amp;gt; 該 DOM 作為建構函式 -&amp;gt; 建構出來的實例  12345678910111213141516171819202122232425262728293031console.log(this); // windowfunction a ()&amp;#123;">
 
 
 
@@ -121,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/categories/vue/"/>
+  <link rel="canonical" href="https://runkids.github.io/javascript/2018032001/"/>
 
 
 
 
 
-  <title>分類: Vue | 威力的學習記錄於此</title>
+  <title>[筆記] 搞懂 javascript 的 this | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -164,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -292,83 +297,220 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Vue<small>分類</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/javascript/2018032001/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Willy Hong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://goo.gl/bydiLS">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="威力的學習記錄於此">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/vue/2018022001/" itemprop="url">
-              
-                <span itemprop="name">使用.sync修飾符對props進行雙向綁定</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">[筆記] 搞懂 javascript 的 this</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-20T19:01:25+08:00"
-              content="2018-02-20" >
-          02-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-20T21:36:59+08:00">
+                2018-03-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/javascript/2018032001/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="javascript/2018032001/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/vue/2017123101/" itemprop="url">
-              
-                <span itemprop="name">使用Vue實做圖片預覽</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-31T19:01:25+08:00"
-              content="2017-12-31" >
-          12-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="一般函式的this"><a href="#一般函式的this" class="headerlink" title="一般函式的this"></a>一般函式的this</h3><ul>
+<li>直接執行 -&gt; window</li>
+<li>作為物件成員函示執行 -&gt; 該物件本身</li>
+<li>作為 DOM 事件監聽函示 -&gt; 該 DOM</li>
+<li>作為建構函式 -&gt; 建構出來的實例</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// window</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// 不一定，取決於函示如何執行</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. 直接執行 </span></span><br><span class="line">a(); <span class="comment">// window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 宣告物件</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  name: <span class="string">'object'</span>,</span><br><span class="line">  a()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.a(); <span class="comment">// 做為物件成員，該函示的this就是該物件本身</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = obj.a;</span><br><span class="line">b(); <span class="comment">//3. 直接執行 =&gt; window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 作為dom監聽事件的函示，this代表該dom本身</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>,a);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5. 建構函示 this代表new出來的物件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> x = <span class="keyword">new</span> A(); <span class="comment">// A &#123;&#125; ;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">///////////////////////</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bfunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> secObg = &#123;&#125;;</span><br><span class="line">secObg.b = bfunc;</span><br><span class="line">secObg.b() <span class="comment">// secObg</span></span><br><span class="line"><span class="comment">///////////////////////</span></span><br><span class="line"><span class="keyword">const</span> objC = &#123;</span><br><span class="line">  a()&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    b(); <span class="comment">//直接執行</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">objC.a(); <span class="comment">// window</span></span><br><span class="line"><span class="comment">///////////////////////</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objD = &#123;a&#125;;</span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>,objD.a); <span class="comment">//btn</span></span><br></pre></td></tr></table></figure>
+<h3 id="箭頭函式的this"><a href="#箭頭函式的this" class="headerlink" title="箭頭函式的this"></a>箭頭函式的this</h3><ul>
+<li>永遠等於箭頭函式外面的this</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  a: <span class="function"><span class="params">()</span>=&gt;</span>&#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>); &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.a(); <span class="comment">// window</span></span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>,a); <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">  <span class="keyword">const</span> b = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//永遠等於箭頭函式外面的this</span></span><br><span class="line">  &#125;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>,a); <span class="comment">// btn</span></span><br></pre></td></tr></table></figure>
+<h3 id="bind-amp-apply-amp-call"><a href="#bind-amp-apply-amp-call" class="headerlink" title="bind &amp; apply &amp; call"></a>bind &amp; apply &amp; call</h3><ul>
+<li>一般函式：指向綁定該物件的this</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = a.bind(<span class="number">0</span>);  <span class="comment">// Number &#123;0&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>箭頭函式： bind &amp; apply &amp; call 會無效</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> add = <span class="function">(<span class="params">x,y</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// window</span></span><br><span class="line">  <span class="built_in">console</span>.log(x+y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = add.bind(<span class="number">0</span>); <span class="comment">// window</span></span><br><span class="line">b(<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">add.apply(<span class="number">0</span>,[<span class="number">3</span>,<span class="number">5</span>]); <span class="comment">// window 無效</span></span><br><span class="line">add.call(<span class="number">0</span>,<span class="number">3</span>,<span class="number">5</span>); <span class="comment">// window 無效</span></span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/js30days/2018031801/" rel="next" title="[筆記][JS30天-Day07] Array Cardio Day2">
+                <i class="fa fa-chevron-left"></i> [筆記][JS30天-Day07] Array Cardio Day2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -376,6 +518,17 @@
 
 
           
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+  
+
 
         </div>
         
@@ -396,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,6 +646,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一般函式的this"><span class="nav-number">1.</span> <span class="nav-text">一般函式的this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭頭函式的this"><span class="nav-number">2.</span> <span class="nav-text">箭頭函式的this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bind-amp-apply-amp-call"><span class="nav-number">3.</span> <span class="nav-text">bind &amp; apply &amp; call</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,6 +789,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -628,6 +810,18 @@
       <script id="dsq-count-scr" src="https://runkids.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://runkids.github.io/javascript/2018032001/';
+          this.page.identifier = 'javascript/2018032001/';
+          this.page.title = '[筆記] 搞懂 javascript 的 this';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://runkids.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

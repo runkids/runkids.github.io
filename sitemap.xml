@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://runkids.github.io/js30days/2018030401/</loc>
+    <loc>https://runkids.github.io/javascript/2018032001/</loc>
     
-    <lastmod>2018-07-08T10:14:02.787Z</lastmod>
+    <lastmod>2018-07-08T17:17:42.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://runkids.github.io/js30days/2018031801/</loc>
+    
+    <lastmod>2018-07-08T14:37:26.029Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://runkids.github.io/js30days/2018031101/</loc>
     
-    <lastmod>2018-07-08T10:12:48.908Z</lastmod>
+    <lastmod>2018-07-08T14:10:20.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://runkids.github.io/js30days/2018030401/</loc>
+    
+    <lastmod>2018-07-08T10:14:02.787Z</lastmod>
     
   </url>
   
