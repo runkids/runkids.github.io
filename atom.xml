@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://runkids.github.io/"/>
-  <updated>2018-07-07T16:36:49.674Z</updated>
+  <updated>2018-07-08T02:50:03.219Z</updated>
   <id>https://runkids.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[筆記][JS30天-Day05] Flex Panels Image Gallery</title>
+    <link href="https://runkids.github.io/js30days/2018030401/"/>
+    <id>https://runkids.github.io/js30days/2018030401/</id>
+    <published>2018-03-04T12:31:08.000Z</published>
+    <updated>2018-07-08T02:50:03.219Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p><h5 id="實做：使用flex實做出圖片牆"><a href="#實做：使用flex實做出圖片牆" class="headerlink" title="實做：使用flex實做出圖片牆"></a>實做：使用flex實做出圖片牆</h5><iframe height="265" scrolling="no" title="JS30Days05" src="//codepen.io/runkids/embed/RJvjjq/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/RJvjjq/" target="_blank" rel="noopener">JS30Days05</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe><hr><h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul><li>flexbox</li><li>element.classList.toggle()</li><li>transitionend Event</li></ul><hr><h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul><li><p>CSS在此篇為主要學習重點</p><ul><li>將<code>.panels</code>設為 <code>display : flex</code></li><li>將每個<code>panel</code>設為 <code>flex : 1</code></li><li>將每個<code>panel</code>設為 <code>display : flex</code> , 並使用 <code>flex-direction</code>將子元素<code>&lt;p&gt;</code>改為垂直方向</li></ul></li><li><p>為每一個<code>panel</code>加入監聽事件：click 以及 transitionend</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">panels.forEach(<span class="function"><span class="params">panel</span>=&gt;</span>&#123;</span><br><span class="line">  panel.addEventListener(<span class="string">'click'</span>,toggleOpen);</span><br><span class="line">  panel.addEventListener(<span class="string">'transitionend'</span>,toggleActive);<span class="comment">//動畫結束後觸發transitionend事件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li><li><p>function <code>toggleOpen</code> 以及 <code>toggleActive</code> 使用toggle新增移除class</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toggle ( String [, force] )</span><br><span class="line">When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.</span><br><span class="line">When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it.</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toggleOpen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.classList.toggle(<span class="string">'open'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toggleActive</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 因class open 有新增 flex 屬性</span></span><br><span class="line">  <span class="comment">// 確保有套上open後才新增open-active</span></span><br><span class="line">  <span class="keyword">if</span>(e.propertyName.includes(<span class="string">'flex'</span>))&#123;</span><br><span class="line">    <span class="keyword">this</span>.classList.toggle(<span class="string">'open-active'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.panel</span><span class="selector-class">.open</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">5</span>; <span class="comment">/*被點擊的圖片比例改變為5*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="補充" target="_blank" rel="noopener">transitionened 補充</a></p><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Element/classList" target="_blank" rel="noopener">Element.classList</a></p><iframe height="265" scrolling="no" title="Flexbox Properties Demonstration" src="//codepen.io/justd/embed/yydezN/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/justd/pen/yydezN/" target="_blank" rel="noopener">Flexbox Properties Demonstration</a> by Dimitar (<a href="https://codepen.io/justd" target="_blank" rel="noopener">@justd</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://goo.gl/ChS3iv&quot; alt=&quot;JS_30_Days&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;實做：使用flex實做出圖片牆&quot;&gt;&lt;a href=&quot;#實做：使用flex實做出圖片牆&quot; class=&quot;headerlink&quot; title=&quot;實做：使
+      
+    
+    </summary>
+    
+      <category term="JS30天學習筆記系列" scheme="https://runkids.github.io/categories/js30days/"/>
+    
+    
+      <category term="javascript" scheme="https://runkids.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>使用.sync修飾符對props進行雙向綁定</title>

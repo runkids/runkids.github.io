@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[筆記][JS30天-Day05] Flex Panels Image Gallery]]></title>
+    <url>%2Fjs30days%2F2018030401%2F</url>
+    <content type="text"><![CDATA[實做：使用flex實做出圖片牆See the Pen JS30Days05 by Hung Wei Heng (@runkids) on CodePen. 學習重點 flexbox element.classList.toggle() transitionend Event 解說 CSS在此篇為主要學習重點 將.panels設為 display : flex 將每個panel設為 flex : 1 將每個panel設為 display : flex , 並使用 flex-direction將子元素&lt;p&gt;改為垂直方向 為每一個panel加入監聽事件：click 以及 transitionend 1234panels.forEach(panel=&gt;&#123; panel.addEventListener('click',toggleOpen); panel.addEventListener('transitionend',toggleActive);//動畫結束後觸發transitionend事件&#125;); function toggleOpen 以及 toggleActive 使用toggle新增移除class 123toggle ( String [, force] )When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it. 1234567891011function toggleOpen()&#123; this.classList.toggle('open');&#125;function toggleActive(e)&#123; // 因class open 有新增 flex 屬性 // 確保有套上open後才新增open-active if(e.propertyName.includes('flex'))&#123; this.classList.toggle('open-active'); &#125;&#125; 1234.panel.open &#123; font-size: 40px; flex: 5; /*被點擊的圖片比例改變為5*/&#125; 補充transitionened 補充 Element.classList See the Pen Flexbox Properties Demonstration by Dimitar (@justd) on CodePen.]]></content>
+      <categories>
+        <category>JS30天學習筆記系列</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用.sync修飾符對props進行雙向綁定]]></title>
     <url>%2Fvue%2F2018022001%2F</url>
     <content type="text"><![CDATA[使用.sync實做雙向綁定注意：此文是記錄 Vue 2.3.0 .sync 而不是1.0的 Demo 用法：以Demo為例 當子組件的 childrenText 發生變化時，使用update:my-prop-name的模式觸發 emit 1this.$emit("update:parentText", e); 而父組件監聽該事件 （先看原本的寫法 1&lt;Children :parentText="text" @update:parentText="e=&gt;text=e"/&gt; 改成使用.sync，達到同樣效果 1&lt;Children :parentText.sync="text"/&gt; 資源參考sync-修饰符]]></content>
