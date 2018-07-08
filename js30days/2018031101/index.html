@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -85,14 +85,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="標籤">
-<meta property="og:url" content="https://runkids.github.io/tags/index.html">
+<meta name="description" content="實做：fetch api 搭配 filter 實現關鍵字篩選器See the Pen JS30Days06 by Hung Wei Heng (@runkids) on CodePen.   學習重點 利用 Fetch API 取得資料 使用 filter 搭配正規表達式篩選資料 input 事件和 change 事件 關鍵字上色   解說 利用 Fetch API 取得資料  使用 fecth">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[筆記][JS30天-Day06] Ajax Type Ahead">
+<meta property="og:url" content="https://runkids.github.io/js30days/2018031101/index.html">
 <meta property="og:site_name" content="威力的學習記錄於此">
+<meta property="og:description" content="實做：fetch api 搭配 filter 實現關鍵字篩選器See the Pen JS30Days06 by Hung Wei Heng (@runkids) on CodePen.   學習重點 利用 Fetch API 取得資料 使用 filter 搭配正規表達式篩選資料 input 事件和 change 事件 關鍵字上色   解說 利用 Fetch API 取得資料  使用 fecth">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-12-28T12:36:29.711Z">
+<meta property="og:image" content="https://goo.gl/ChS3iv">
+<meta property="og:updated_time" content="2018-07-08T10:12:48.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="標籤">
+<meta name="twitter:title" content="[筆記][JS30天-Day06] Ajax Type Ahead">
+<meta name="twitter:description" content="實做：fetch api 搭配 filter 實現關鍵字篩選器See the Pen JS30Days06 by Hung Wei Heng (@runkids) on CodePen.   學習重點 利用 Fetch API 取得資料 使用 filter 搭配正規表達式篩選資料 input 事件和 change 事件 關鍵字上色   解說 利用 Fetch API 取得資料  使用 fecth">
+<meta name="twitter:image" content="https://goo.gl/ChS3iv">
 
 
 
@@ -122,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://runkids.github.io/tags/"/>
+  <link rel="canonical" href="https://runkids.github.io/js30days/2018031101/"/>
 
 
 
 
 
-  <title>標籤 | 威力的學習記錄於此</title>
+  <title>[筆記][JS30天-Day06] Ajax Type Ahead | 威力的學習記錄於此</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -295,40 +301,242 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://runkids.github.io/js30days/2018031101/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Willy Hong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://goo.gl/bydiLS">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="威力的學習記錄於此">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">標籤</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共計 4 個標籤
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/VSCode/" style="font-size: 12px; color: #ccc">VSCode</a> <a href="/tags/css/" style="font-size: 21px; color: #6f6f6f">css</a> <a href="/tags/javascript/" style="font-size: 30px; color: #111">javascript</a> <a href="/tags/vue/" style="font-size: 21px; color: #6f6f6f">vue</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">[筆記][JS30天-Day06] Ajax Type Ahead</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-11T10:31:08+08:00">
+                2018-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js30days/" itemprop="url" rel="index">
+                    <span itemprop="name">JS30天學習筆記系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/js30days/2018031101/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="js30days/2018031101/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="https://goo.gl/ChS3iv" alt="JS_30_Days"></p>
+<h5 id="實做：fetch-api-搭配-filter-實現關鍵字篩選器"><a href="#實做：fetch-api-搭配-filter-實現關鍵字篩選器" class="headerlink" title="實做：fetch api 搭配 filter 實現關鍵字篩選器"></a>實做：fetch api 搭配 filter 實現關鍵字篩選器</h5><iframe height="500" scrolling="no" title="JS30Days06" src="//codepen.io/runkids/embed/NzQzzx/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/runkids/pen/NzQzzx/" target="_blank" rel="noopener">JS30Days06</a> by Hung Wei Heng (<a href="https://codepen.io/runkids" target="_blank" rel="noopener">@runkids</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<hr>
+<h5 id="學習重點"><a href="#學習重點" class="headerlink" title="學習重點"></a>學習重點</h5><ul>
+<li>利用 Fetch API 取得資料</li>
+<li>使用 filter 搭配正規表達式篩選資料</li>
+<li>input 事件和 change 事件</li>
+<li>關鍵字上色</li>
+</ul>
+<hr>
+<h5 id="解說"><a href="#解說" class="headerlink" title="解說"></a>解說</h5><ul>
+<li><p>利用 Fetch API 取得資料</p>
+<ul>
+<li><p>使用 <code>fecth</code> API 會回傳 <code>Promise</code> ，第一個回傳的是一個 <code>readableStream</code>，將它解析成 <code>json</code> 後來讀取</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cities = []</span><br><span class="line"><span class="keyword">const</span> endpoint = <span class="string">'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json'</span></span><br><span class="line"></span><br><span class="line">fetch(endpoint)</span><br><span class="line">.then(<span class="function"><span class="params">blob</span> =&gt;</span> blob.json())    <span class="comment">// 取得 readableStream，並轉成 json 後 return</span></span><br><span class="line">.then(<span class="function"><span class="params">data</span>=&gt;</span> cities.push(...data)); <span class="comment">//把 data 給 cities</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>使用正規表達式篩選資料</p>
+<ol>
+<li><p>利用 <code>new RegExp(regex, flag)</code> 來建立正規式：<br> 第一個參數: 正規表達式的內容<br> 第二個參數: <code>flag</code><br>– <code>g</code> 表示 global search，也就是會去找整份文件，而不是找到就停<br>– <code>i</code> 表示 case insensitive，也就是不去區分大小寫</p>
+ <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(wordToMatch, <span class="string">'gi'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <code>String.prototype.match(regexp)</code> 這個方法來判斷給的字串當中是否有符合該 regexp 的內容，符合會回傳陣列，否則回傳 <code>null</code>。</p>
+ <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findMatch</span> (<span class="params">wordToMatch, cities</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cities.filter(<span class="function"><span class="params">place</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(wordToMatch, <span class="string">'gi'</span>)</span><br><span class="line">        <span class="keyword">return</span> place.city.match(regex) || place.state.match(regex)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> filter用法可以參考這篇 <a href="https://runkids.github.io/js30days/2018010401/">[筆記][JS30天-Day04] Array Cardio Day1</a>  </p>
+</li>
+<li>使用 <code>String.prototype.replace(regex|substr, newSubstr)</code> 來置換內容,並在此時用html tag加上class達到 <code>關鍵字背景色</code> 的效果 <pre><code class="jsx"><span class="keyword">const</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(e.target.value, <span class="string">'gi'</span>);
+<span class="comment">/* 加上class達到 `關鍵字背景色` 的效果 */</span>
+<span class="keyword">const</span> cityNameHighlight = place.city.replace(regex, <span class="string">`&lt;span class="hl"&gt;<span class="subst">${e.target.value}</span>&lt;/span&gt;`</span>) ;
+<span class="keyword">const</span> stateNameHighlight = place.state.replace(regex, <span class="string">`&lt;span class="hl"&gt;<span class="subst">${e.target.value}</span>&lt;/span&gt;`</span>) ;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>input 事件和 change 事件的差異<ul>
+<li><code>input event</code> 會在任何元素值改變的時候被出發（例如每打一個字都會觸發一次）</li>
+<li><code>change event</code> 則是會在有元素值改變，且該元素脫離 focus 狀態時才觸發</li>
+</ul>
+</li>
+</ul>
+<h5 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h5><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API" target="_blank" rel="noopener">Fetch_API</a></p>
+<p><a href="https://www.youtube.com/watch?v=xrMH9uMNGt8" target="_blank" rel="noopener">線上讀書會-regex 快速入門（承億主講）</a></p>
+<p></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/js30days/2018030401/" rel="next" title="[筆記][JS30天-Day05] Flex Panels Image Gallery">
+                <i class="fa fa-chevron-left"></i> [筆記][JS30天-Day05] Flex Panels Image Gallery
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -368,8 +576,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,6 +673,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#實做：fetch-api-搭配-filter-實現關鍵字篩選器"><span class="nav-number">1.</span> <span class="nav-text">實做：fetch api 搭配 filter 實現關鍵字篩選器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#學習重點"><span class="nav-number">2.</span> <span class="nav-text">學習重點</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解說"><span class="nav-number">3.</span> <span class="nav-text">解說</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#補充"><span class="nav-number">4.</span> <span class="nav-text">補充</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -607,9 +840,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://runkids.github.io/tags/index.html';
-          this.page.identifier = 'tags/index.html';
-          this.page.title = '標籤';
+          this.page.url = 'https://runkids.github.io/js30days/2018031101/';
+          this.page.identifier = 'js30days/2018031101/';
+          this.page.title = '[筆記][JS30天-Day06] Ajax Type Ahead';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://runkids.disqus.com/embed.js';
